@@ -1,3 +1,9 @@
+
+/*
+*  Input: [base != 0, power = R ?? 1]
+*  Returns: return a number
+*/
+
 function quickpow(base: number, power: int): number {
     let ret: number = 1.0;
     while(power > 0) {
@@ -10,6 +16,11 @@ function quickpow(base: number, power: int): number {
 
     return ret;
 }
+
+/*
+*   Input: 0
+*   Output: 57
+*/
 
 function test(x: number): number {
     return x ?? 57;
