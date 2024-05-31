@@ -1,6 +1,6 @@
 
 /*
-*  Input: [base != 0, power = R ?? 1]
+*  Input: [base != 0, power = R(R = 0, ret = 1)]
 *  Returns: return a number
 */
 
