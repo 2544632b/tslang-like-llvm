@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chan/Desktop/StaticScript-master-2/src
+# Install script for directory: /Users/chan/Documents/GitHub/tslang-like-llvm/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,31 +39,31 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/Entity/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/AST/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/Sema/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/Optimization/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/Optimization/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/Driver/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/cmake_install.cmake")
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chan/Desktop/StaticScript-master-2/src/Sema
+# Install script for directory: /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

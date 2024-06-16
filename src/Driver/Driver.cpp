@@ -65,7 +65,8 @@ int main(int argc, char **argv) {
     if (outputFilename.empty()) {
         outputIRFilename = llvm::formatv("{0}-ir.ll", inputBasename);
         outputObjFilename = llvm::formatv("{0}-out.o", inputBasename);
-        outputExeFilename = llvm::formatv("{0}-out.exe", inputBasename);
+        outputExeFilename = llvm::formatv("{0}-out.out", inputBasename);
+        // For windows, output is a PE (.exe)
     } else {
         outputIRFilename = outputObjFilename = outputExeFilename = outputFilename;
     }
@@ -158,7 +159,7 @@ int main(int argc, char **argv) {
     fin.close();
 
     if (!emitLLVM && !noLink) {
-        String linkCmd = llvm::formatv("clang {0} -lm -O2 -o {1}", outputObjFilename, outputExeFilename);
+        String linkCmd = llvm::formatv("clang++ {0} -lm -O2 -o {1}", outputObjFilename, outputExeFilename);
         system(linkCmd.data());
         if (outputFilename.empty()) {
             String rmCmd = llvm::formatv("rm -f {0}", outputObjFilename);

@@ -77,6 +77,7 @@ void IRGenerator::visit(const SharedPtr<StringLiteralExprNode> &strLiteralExpr) 
     arrayLiteralExpr->code = llvmIRBuilder.CreateCall(BuiltinArray::create##UpperCaseType##ArrayWithLiteralFunc, createArgs); \
 
 
+// Create a array
 void IRGenerator::visit(const SharedPtr<ArrayLiteralExprNode> &arrayLiteralExpr) {
     const SharedPtr<Type> &elementType = arrayLiteralExpr->type->asArray()->getElementType();
 
@@ -94,6 +95,8 @@ void IRGenerator::visit(const SharedPtr<ArrayLiteralExprNode> &arrayLiteralExpr)
             createFunc = BuiltinArray::createStringArrayFunc;
         } else if (elementType->isArray()) {
             createFunc = BuiltinArray::createArrayArrayFunc;
+        } else {
+            reportTypeError("Array express is empty!");
         }
         arrayLiteralExpr->code = llvmIRBuilder.CreateCall(createFunc, errorAlloca);
     } else {
@@ -255,6 +258,31 @@ LLVMValue* generateNullishCoalescing(LLVMValue* lhs, LLVMValue* rhs, llvm::IRBui
         lhsIsNull = builder.CreateICmpEQ(lhsAsInt, llvm::ConstantInt::get(llvm::Type::getInt64Ty(context), 0));
     } else if (lhs->getType()->isIntegerTy(64)) {
         lhsIsNull = builder.CreateICmpEQ(lhs, llvm::ConstantInt::get(llvm::Type::getInt64Ty(context), 0));
+    } else if (lhs->getType()->isStructTy()) {
+        llvm::StructType *sType = llvm::dyn_cast<llvm::StructType>(lhs->getType());
+        if(sType->hasName()) {
+            llvm::StringRef typeName = sType->getName();
+            if(typeName == "struct.type_string") {
+                llvm::Value* result = builder.CreateCall(BuiltinString::stringSizeFunc, lhs, "call_string_size");
+                lhsIsNull = builder.CreateICmpEQ(result, llvm::ConstantInt::get(llvm::Type::getInt64Ty(context), 0), "cmp_zero");
+            } else {
+                lhsIsNull = builder.getFalse();
+            }
+        } else {
+            lhsIsNull = builder.getFalse();
+        }
+    } else if (lhs->getType()->isPointerTy()) {
+        llvm::Type *elementType = lhs->getType()->getPointerElementType();
+        llvm::StructType *structType = llvm::dyn_cast<llvm::StructType>(elementType);
+        if(structType->hasName()) {
+            llvm::StringRef typeName = structType->getName();
+            if(typeName == "struct.type_string") {
+                llvm::Value* result = builder.CreateCall(BuiltinString::stringSizeFunc, lhs, "call_string_size");
+                lhsIsNull = builder.CreateICmpEQ(result, llvm::ConstantInt::get(llvm::Type::getInt64Ty(context), 0), "cmp_zero");
+            } else {
+                lhsIsNull = builder.getFalse();
+            }
+        }
     } else {
         lhsIsNull = builder.getFalse();
     }
@@ -407,27 +435,6 @@ void IRGenerator::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
         }
         
         case StaticScriptLexer::Nullish: {
-            /*
-            if(leftType->isInteger()) {
-                llvmIRBuilder.CreateICmpEQ(lhsCode, llvmIRBuilder.getInt64(0));
-                if(lhsCode == llvmIRBuilder.getInt64(0)) {
-                    // lhsCode = rhsCode;
-                    targetCode = rhsCode;
-                } else if(lhsCode != llvmIRBuilder.getInt64(0)) {
-                    targetCode = lhsCode;
-                }
-            } else if(leftType->isFloat()) {
-                if(float2integer(lhsCode) == llvmIRBuilder.getInt64(0)) {
-                    // lhsCode = rhsCode;
-                    targetCode = rhsCode;
-                } else if(float2integer(lhsCode) != llvmIRBuilder.getInt64(0)) {
-                    targetCode = lhsCode;
-                }
-            } else if(leftType->isUnknown()) {
-                // lhsCode = rhsCode;
-                targetCode = rhsCode;
-            }
-            */
             targetCode = generateNullishCoalescing(lhsCode, rhsCode, llvmIRBuilder);
 
             break;
@@ -527,6 +534,7 @@ void IRGenerator::visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) {
     LLVMValue *lhsCode = topExpr->lhs->code;
     LLVMValue *rhsCode = topExpr->rhs->code;
     
+    // DO NOT RUNNING ON JIT!
     if(!boolType->isBoolean()) {
         targetCode = lhsCode;
     } else if(boolType->isBoolean()) {
@@ -540,6 +548,7 @@ void IRGenerator::visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) {
     topExpr->code = targetCode;
 }
 
+// Get a element
 void IRGenerator::visit(const SharedPtr<ArraySubscriptExprNode> &asExpr) {
     ASTVisitor::visit(asExpr);
     SharedPtr<Type> iterType = asExpr->baseExpr->type;
@@ -560,6 +569,7 @@ void IRGenerator::visit(const SharedPtr<ArraySubscriptExprNode> &asExpr) {
         } else if (iterEleType->isArray()) {
             getFunc = BuiltinArray::getArrayFunc;
         }
+        
         iterType = iterEleType;
         iterCode = llvmIRBuilder.CreateCall(getFunc, Vector<LLVMValue *>{iterCode, indexExpr->code, errorAlloca});
         LLVMValue *errorLoad = llvmIRBuilder.CreateLoad(errorAlloca);

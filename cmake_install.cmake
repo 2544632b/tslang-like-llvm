@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chan/Desktop/StaticScript-master-2
+# Install script for directory: /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/lib/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/src/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/chan/Desktop/StaticScript-master-2/tests/cmake_install.cmake")
+  include("/Users/chan/Documents/GitHub/tslang-like-llvm/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/chan/Desktop/StaticScript-master-2/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/chan/Documents/GitHub/tslang-like-llvm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

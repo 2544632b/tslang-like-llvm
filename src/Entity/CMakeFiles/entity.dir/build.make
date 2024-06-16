@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Include any dependencies generated for this target.
 include src/Entity/CMakeFiles/entity.dir/depend.make
@@ -72,30 +72,30 @@ include src/Entity/CMakeFiles/entity.dir/flags.make
 src/Entity/CMakeFiles/entity.dir/Type.cpp.o: src/Entity/CMakeFiles/entity.dir/flags.make
 src/Entity/CMakeFiles/entity.dir/Type.cpp.o: src/Entity/Type.cpp
 src/Entity/CMakeFiles/entity.dir/Type.cpp.o: src/Entity/CMakeFiles/entity.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Entity/CMakeFiles/entity.dir/Type.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Entity/CMakeFiles/entity.dir/Type.cpp.o -MF CMakeFiles/entity.dir/Type.cpp.o.d -o CMakeFiles/entity.dir/Type.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Entity/Type.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Entity/CMakeFiles/entity.dir/Type.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Entity/CMakeFiles/entity.dir/Type.cpp.o -MF CMakeFiles/entity.dir/Type.cpp.o.d -o CMakeFiles/entity.dir/Type.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Type.cpp
 
 src/Entity/CMakeFiles/entity.dir/Type.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/entity.dir/Type.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Entity/Type.cpp > CMakeFiles/entity.dir/Type.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Type.cpp > CMakeFiles/entity.dir/Type.cpp.i
 
 src/Entity/CMakeFiles/entity.dir/Type.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/entity.dir/Type.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Entity/Type.cpp -o CMakeFiles/entity.dir/Type.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Type.cpp -o CMakeFiles/entity.dir/Type.cpp.s
 
 src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: src/Entity/CMakeFiles/entity.dir/flags.make
 src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: src/Entity/Scope.cpp
 src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: src/Entity/CMakeFiles/entity.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Entity/CMakeFiles/entity.dir/Scope.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Entity/CMakeFiles/entity.dir/Scope.cpp.o -MF CMakeFiles/entity.dir/Scope.cpp.o.d -o CMakeFiles/entity.dir/Scope.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Entity/Scope.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Entity/CMakeFiles/entity.dir/Scope.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Entity/CMakeFiles/entity.dir/Scope.cpp.o -MF CMakeFiles/entity.dir/Scope.cpp.o.d -o CMakeFiles/entity.dir/Scope.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Scope.cpp
 
 src/Entity/CMakeFiles/entity.dir/Scope.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/entity.dir/Scope.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Entity/Scope.cpp > CMakeFiles/entity.dir/Scope.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Scope.cpp > CMakeFiles/entity.dir/Scope.cpp.i
 
 src/Entity/CMakeFiles/entity.dir/Scope.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/entity.dir/Scope.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Entity/Scope.cpp -o CMakeFiles/entity.dir/Scope.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Scope.cpp -o CMakeFiles/entity.dir/Scope.cpp.s
 
 entity: src/Entity/CMakeFiles/entity.dir/Type.cpp.o
 entity: src/Entity/CMakeFiles/entity.dir/Scope.cpp.o
@@ -107,10 +107,10 @@ src/Entity/CMakeFiles/entity.dir/build: entity
 .PHONY : src/Entity/CMakeFiles/entity.dir/build
 
 src/Entity/CMakeFiles/entity.dir/clean:
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Entity && $(CMAKE_COMMAND) -P CMakeFiles/entity.dir/cmake_clean.cmake
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity && $(CMAKE_COMMAND) -P CMakeFiles/entity.dir/cmake_clean.cmake
 .PHONY : src/Entity/CMakeFiles/entity.dir/clean
 
 src/Entity/CMakeFiles/entity.dir/depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/src/Entity /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/src/Entity /Users/chan/Desktop/StaticScript-master-2/src/Entity/CMakeFiles/entity.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/CMakeFiles/entity.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/Entity/CMakeFiles/entity.dir/depend
 

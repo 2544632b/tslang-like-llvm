@@ -1,9 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lib"
-  "ss_array.bc"
-  "ss_error.bc"
-  "ss_io.bc"
-  "ss_string.bc"
+  "type_array.bc"
+  "type_error.bc"
+  "type_input.cpp"
+  "type_io.bc"
+  "type_map.cpp"
+  "type_math.c"
+  "type_string.bc"
 )
 
 # Per-language clean rules from dependency scanning.

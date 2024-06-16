@@ -47,11 +47,16 @@ void IRGenerator::visit(const SharedPtr<IfStmtNode> &ifStmt) {
     emitBlock(ifStmt->endBB, true);
 }
 
-// TODO: break和continue入栈出栈
+// TODO: break和continue入栈出栈（已写入）
 void IRGenerator::visit(const SharedPtr<WhileStmtNode> &whileStmt) {
+
     whileStmt->condBB = createBasicBlock("while.cond");
     whileStmt->bodyBB = createBasicBlock("while.body");
     whileStmt->endBB = createBasicBlock("while.end");
+
+    breakStack.push_back(whileStmt->endBB);
+    continueStack.push_back(whileStmt->condBB);
+
     emitBlock(whileStmt->condBB);
     whileStmt->condition->accept(shared_from_this());
     llvmIRBuilder.CreateCondBr(whileStmt->condition->code, whileStmt->bodyBB, whileStmt->endBB);
@@ -59,11 +64,13 @@ void IRGenerator::visit(const SharedPtr<WhileStmtNode> &whileStmt) {
     emitBlock(whileStmt->bodyBB);
     whileStmt->body->accept(shared_from_this());
     emitBranch(whileStmt->condBB);
-
     emitBlock(whileStmt->endBB, true);
+
+    breakStack.pop_back();
+    continueStack.pop_back();
 }
 
-// TODO: break和continue入栈出栈
+// TODO: break和continue入栈出栈（已写入）
 void IRGenerator::visit(const SharedPtr<ForStmtNode> &forStmt) {
     if (forStmt->initVarStmt) {
         forStmt->initVarStmt->accept(shared_from_this());
@@ -74,6 +81,10 @@ void IRGenerator::visit(const SharedPtr<ForStmtNode> &forStmt) {
     }
     forStmt->condBB = createBasicBlock("for.cond");
     forStmt->endBB = createBasicBlock("for.end");
+
+    breakStack.push_back(forStmt->endBB);
+    continueStack.push_back(forStmt->condBB);
+
     emitBlock(forStmt->condBB);
 
     if (!forStmt->updates.empty()) {
@@ -99,36 +110,46 @@ void IRGenerator::visit(const SharedPtr<ForStmtNode> &forStmt) {
     }
 
     emitBranch(forStmt->condBB);
-
     emitBlock(forStmt->endBB, true);
+
+    breakStack.pop_back();
+    continueStack.pop_back();
 }
 
 void IRGenerator::visit(const SharedPtr<ContinueStmtNode> &continueStmt) {
-    SharedPtr<WhileStmtNode> whileStmt = dynPtrCast<WhileStmtNode>(continueStmt->refIterationStmt);
-    if (whileStmt) {
-        llvmIRBuilder.CreateBr(whileStmt->condBB);
-    } else {
-        // 语义分析阶段保证了refIterationStmt不是WhileStmtNode类型就是ForStmtNode类型
-        SharedPtr<ForStmtNode> forStmt = dynPtrCast<ForStmtNode>(continueStmt->refIterationStmt);
-        llvmIRBuilder.CreateBr(forStmt->updateBB ? forStmt->updateBB : forStmt->condBB);
+    if(!continueStack.empty()) {
+        SharedPtr<WhileStmtNode> whileStmt = dynPtrCast<WhileStmtNode>(continueStmt->refIterationStmt);
+        if (whileStmt) {
+            llvmIRBuilder.CreateBr(whileStmt->condBB);
+        } else {
+            // 语义分析阶段保证了refIterationStmt不是WhileStmtNode类型就是ForStmtNode类型
+            SharedPtr<ForStmtNode> forStmt = dynPtrCast<ForStmtNode>(continueStmt->refIterationStmt);
+            llvmIRBuilder.CreateBr(forStmt->updateBB ? forStmt->updateBB : forStmt->condBB);
+        }
     }
 }
 
 void IRGenerator::visit(const SharedPtr<BreakStmtNode> &breakStmt) {
-    SharedPtr<WhileStmtNode> whileStmt = dynPtrCast<WhileStmtNode>(breakStmt->refIterationStmt);
-    if (whileStmt) {
-        llvmIRBuilder.CreateBr(whileStmt->endBB);
-    } else {
-        SharedPtr<ForStmtNode> forStmt = dynPtrCast<ForStmtNode>(breakStmt->refIterationStmt);
-        llvmIRBuilder.CreateBr(forStmt->endBB);
+    if(!breakStack.empty()) {
+        SharedPtr<WhileStmtNode> whileStmt = dynPtrCast<WhileStmtNode>(breakStmt->refIterationStmt);
+        if (whileStmt) {
+            llvmIRBuilder.CreateBr(whileStmt->endBB);
+        } else {
+            SharedPtr<ForStmtNode> forStmt = dynPtrCast<ForStmtNode>(breakStmt->refIterationStmt);
+            llvmIRBuilder.CreateBr(forStmt->endBB);
+        }
     }
 }
 
-// TODO: 处理函数中间的return语句
+// TODO: 处理函数中间的return语句（已写入）
 void IRGenerator::visit(const SharedPtr<ReturnStmtNode> &returnStmt) {
     ASTVisitor::visit(returnStmt);
     const auto &returnExpr = returnStmt->returnExpr;
     const auto &returnType = returnStmt->refFuncDecl->returnType;
+
+    // 新增返回之前的插入点
+    llvm::BasicBlock *currentBB = llvmIRBuilder.GetInsertBlock();
+
     if (returnStmt->returnExpr) {
         if (returnExpr->type->isInteger() && returnType->isFloat()) {
             // 将整型返回值转为浮点型
@@ -141,5 +162,13 @@ void IRGenerator::visit(const SharedPtr<ReturnStmtNode> &returnStmt) {
         llvmIRBuilder.CreateRet(returnExpr->code);
     } else {
         llvmIRBuilder.CreateRetVoid();
+    }
+
+    // 如果在中间返回
+    if(!currentBB->getTerminator()) {
+        llvm::BasicBlock *afterReturnBB = llvm::BasicBlock::Create(llvmIRBuilder.getContext(), "after_return", currentBB->getParent());
+        // llvmIRBuilder.SetInsertPoint(currentBB);
+        llvmIRBuilder.CreateBr(afterReturnBB);
+        llvmIRBuilder.SetInsertPoint(afterReturnBB);
     }
 }

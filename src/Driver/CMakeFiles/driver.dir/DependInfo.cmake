@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/chan/Desktop/StaticScript-master-2/src/Driver/Driver.cpp" "src/Driver/CMakeFiles/driver.dir/Driver.cpp.o" "gcc" "src/Driver/CMakeFiles/driver.dir/Driver.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/Driver.cpp" "src/Driver/CMakeFiles/driver.dir/Driver.cpp.o" "gcc" "src/Driver/CMakeFiles/driver.dir/Driver.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

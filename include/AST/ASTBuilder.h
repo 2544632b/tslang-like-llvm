@@ -43,6 +43,8 @@ public:
 
     antlrcpp::Any visitBasicType(StaticScriptParser::BasicTypeContext *ctx) override;
 
+    /*antlrcpp::Any visitUnionType(StaticScriptParser::UnionTypeContext *ctx) override;*/
+
     antlrcpp::Any visitFunctionDeclaration(StaticScriptParser::FunctionDeclarationContext *ctx) override;
 
     antlrcpp::Any visitParameterList(StaticScriptParser::ParameterListContext *ctx) override;

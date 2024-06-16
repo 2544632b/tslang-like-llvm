@@ -16,7 +16,7 @@ public:
 
     void visit(const SharedPtr<ContinueStmtNode> &continueStmt) override;
 
-    /* void visit(const SharedPtr<IfStmtNode> &ifStmt) override; // 多事。 */
+    void visit(const SharedPtr<IfStmtNode> &ifStmt) override; // 多事。
 
     void visit(const SharedPtr<BreakStmtNode> &breakStmt) override;
 };

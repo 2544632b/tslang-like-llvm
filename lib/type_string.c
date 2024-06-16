@@ -121,3 +121,7 @@ long type_string_trim(type_string *str) {
     type_string_trim_right(str);
     return type_string_trim_left(str);
 }
+
+long string_size(type_string *str) {
+    return type_string_get_size(str);
+}

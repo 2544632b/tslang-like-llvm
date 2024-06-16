@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Utility rule file for acc_gen.
 
@@ -78,6 +78,6 @@ CMakeFiles/acc_gen.dir/clean:
 .PHONY : CMakeFiles/acc_gen.dir/clean
 
 CMakeFiles/acc_gen.dir/depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles/acc_gen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/acc_gen.dir/depend
 

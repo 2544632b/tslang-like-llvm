@@ -39,6 +39,7 @@ void IRGenerator::visit(const SharedPtr<VarDeclNode> &varDecl) {
                 initializer = llvm::ConstantInt::get(type, 0);
             }
         }
+
         auto *gVar = new LLVMGlobalVariable(
                 *llvmModule,
                 type,

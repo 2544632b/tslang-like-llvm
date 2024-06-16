@@ -48,7 +48,7 @@ void TypeChecker::visit(const SharedPtr<VarDeclNode> &varDecl) {
 void TypeChecker::visit(const SharedPtr<ArraySubscriptExprNode> &asExpr) {
     ASTVisitor::visit(asExpr);
     if (!asExpr->baseExpr->type->isArray()) {
-        reportTypeError("Base of array subscript expression is not array type");
+        reportTypeError("Base of array subscript expression is not array type or string type");
     }
     for (const SharedPtr<ExprNode> &indexExpr : asExpr->indexExprs) {
         if (!indexExpr->type->isInteger()) {
@@ -76,7 +76,7 @@ void TypeChecker::visit(const SharedPtr<CallExprNode> &callExpr) {
         reportTypeError("The number of arguments did not match when calling '" + callExpr->calleeName + "' function");
     }
     for (size_t i = 0; i < argsSize; ++i) {
-        if (!params[i]->type->sameAs(args[i]->type)) {
+        if (!params[i]->type->sameAs(args[i]->type) && (callExpr->calleeName != "array_length")) {
             reportTypeError(
                     "The type of the " +
                     std::to_string(i + 1) +
@@ -138,16 +138,12 @@ void TypeChecker::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
 
     // 所有的二元运算符只支持运算同类类型的表达式)
     if (!leftType->sameAs(rightType)) {
-        if(bop != StaticScriptLexer::ConditionalQuestion) {
-            reportTypeError("Binary operator '" + std::to_string(bop) + "' only supports expressions of the same type");
-        }
+        reportTypeError("Binary operator '" + std::to_string(bop) + "' only supports expressions of the same type");
     }
 
     // 检查算数类型是否符合运算符要求
     if (bop == StaticScriptLexer::Plus || bop == StaticScriptLexer::PlusAssign) {
-        if (!leftType->isNumber() &&
-            !leftType->isString()
-            ) {
+        if (!leftType->isNumber() && !leftType->isString()) {
             reportTypeError("Add string and integer only operation types are supported");
         }
     } else if (bop >= StaticScriptLexer::Minus && bop <= StaticScriptLexer::Modulus ||
@@ -170,11 +166,11 @@ void TypeChecker::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
         if (!leftType->isBoolean()) {
             reportTypeError("Binary operator '" + std::to_string(bop) + "' only supports boolean type");
         }
-    } /*else if (bop == StaticScriptLexer::Nullish) {
+    } else if (bop == StaticScriptLexer::Nullish) {
         if(!rightType->compatibleWith(leftType)) {
             reportTypeError("Type mismatch in nullish '" + std::to_string(bop) + "' coalescing operation.");
         }
-    }*/ 
+    }
 
     // 设置二元运算表达式的类型
     if (bop >= StaticScriptLexer::LessThan && bop <= StaticScriptLexer::NotEquals) {

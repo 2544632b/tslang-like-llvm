@@ -73,8 +73,17 @@ public:
     static SharedPtrMap<String, FunctionDeclNode> getBuiltinFunctions();
 
     FunctionDeclNode(
+            String name
+    );
+
+    FunctionDeclNode(
             String name,
             const SharedPtrVector<ParmVarDeclNode> &params
+    );
+
+    FunctionDeclNode(
+            String name,
+            const SharedPtr<Type> &returnType
     );
 
     FunctionDeclNode(

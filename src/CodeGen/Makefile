@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/StaticScript-master-2/CMakeFiles /Users/chan/Desktop/StaticScript-master-2/src/CodeGen//CMakeFiles/progress.marks
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/StaticScript-master-2/CMakeFiles 0
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles /Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen//CMakeFiles/progress.marks
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/clean
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/preinstall
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/preinstall
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CodeGen/CMakeFiles/codegen.dir/rule:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/CMakeFiles/codegen.dir/rule
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CodeGen/CMakeFiles/codegen.dir/rule
 .PHONY : src/CodeGen/CMakeFiles/codegen.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ codegen: src/CodeGen/CMakeFiles/codegen.dir/rule
 
 # fast build rule for target.
 codegen/fast:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/build
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/build
 .PHONY : codegen/fast
 
 Builtin.o: Builtin.cpp.o
@@ -145,7 +145,7 @@ Builtin.o: Builtin.cpp.o
 
 # target to build an object file
 Builtin.cpp.o:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o
 .PHONY : Builtin.cpp.o
 
 Builtin.i: Builtin.cpp.i
@@ -153,7 +153,7 @@ Builtin.i: Builtin.cpp.i
 
 # target to preprocess a source file
 Builtin.cpp.i:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.i
 .PHONY : Builtin.cpp.i
 
 Builtin.s: Builtin.cpp.s
@@ -161,7 +161,7 @@ Builtin.s: Builtin.cpp.s
 
 # target to generate assembly for a file
 Builtin.cpp.s:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.s
 .PHONY : Builtin.cpp.s
 
 DeclCodeGen.o: DeclCodeGen.cpp.o
@@ -169,7 +169,7 @@ DeclCodeGen.o: DeclCodeGen.cpp.o
 
 # target to build an object file
 DeclCodeGen.cpp.o:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o
 .PHONY : DeclCodeGen.cpp.o
 
 DeclCodeGen.i: DeclCodeGen.cpp.i
@@ -177,7 +177,7 @@ DeclCodeGen.i: DeclCodeGen.cpp.i
 
 # target to preprocess a source file
 DeclCodeGen.cpp.i:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.i
 .PHONY : DeclCodeGen.cpp.i
 
 DeclCodeGen.s: DeclCodeGen.cpp.s
@@ -185,7 +185,7 @@ DeclCodeGen.s: DeclCodeGen.cpp.s
 
 # target to generate assembly for a file
 DeclCodeGen.cpp.s:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.s
 .PHONY : DeclCodeGen.cpp.s
 
 ExprCodeGen.o: ExprCodeGen.cpp.o
@@ -193,7 +193,7 @@ ExprCodeGen.o: ExprCodeGen.cpp.o
 
 # target to build an object file
 ExprCodeGen.cpp.o:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o
 .PHONY : ExprCodeGen.cpp.o
 
 ExprCodeGen.i: ExprCodeGen.cpp.i
@@ -201,7 +201,7 @@ ExprCodeGen.i: ExprCodeGen.cpp.i
 
 # target to preprocess a source file
 ExprCodeGen.cpp.i:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.i
 .PHONY : ExprCodeGen.cpp.i
 
 ExprCodeGen.s: ExprCodeGen.cpp.s
@@ -209,7 +209,7 @@ ExprCodeGen.s: ExprCodeGen.cpp.s
 
 # target to generate assembly for a file
 ExprCodeGen.cpp.s:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.s
 .PHONY : ExprCodeGen.cpp.s
 
 IRGenerator.o: IRGenerator.cpp.o
@@ -217,7 +217,7 @@ IRGenerator.o: IRGenerator.cpp.o
 
 # target to build an object file
 IRGenerator.cpp.o:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o
 .PHONY : IRGenerator.cpp.o
 
 IRGenerator.i: IRGenerator.cpp.i
@@ -225,7 +225,7 @@ IRGenerator.i: IRGenerator.cpp.i
 
 # target to preprocess a source file
 IRGenerator.cpp.i:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.i
 .PHONY : IRGenerator.cpp.i
 
 IRGenerator.s: IRGenerator.cpp.s
@@ -233,7 +233,7 @@ IRGenerator.s: IRGenerator.cpp.s
 
 # target to generate assembly for a file
 IRGenerator.cpp.s:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.s
 .PHONY : IRGenerator.cpp.s
 
 Pass.o: Pass.cpp.o
@@ -241,7 +241,7 @@ Pass.o: Pass.cpp.o
 
 # target to build an object file
 Pass.cpp.o:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o
 .PHONY : Pass.cpp.o
 
 Pass.i: Pass.cpp.i
@@ -249,7 +249,7 @@ Pass.i: Pass.cpp.i
 
 # target to preprocess a source file
 Pass.cpp.i:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.i
 .PHONY : Pass.cpp.i
 
 Pass.s: Pass.cpp.s
@@ -257,7 +257,7 @@ Pass.s: Pass.cpp.s
 
 # target to generate assembly for a file
 Pass.cpp.s:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.s
 .PHONY : Pass.cpp.s
 
 StmtCodeGen.o: StmtCodeGen.cpp.o
@@ -265,7 +265,7 @@ StmtCodeGen.o: StmtCodeGen.cpp.o
 
 # target to build an object file
 StmtCodeGen.cpp.o:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o
 .PHONY : StmtCodeGen.cpp.o
 
 StmtCodeGen.i: StmtCodeGen.cpp.i
@@ -273,7 +273,7 @@ StmtCodeGen.i: StmtCodeGen.cpp.i
 
 # target to preprocess a source file
 StmtCodeGen.cpp.i:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.i
 .PHONY : StmtCodeGen.cpp.i
 
 StmtCodeGen.s: StmtCodeGen.cpp.s
@@ -281,7 +281,7 @@ StmtCodeGen.s: StmtCodeGen.cpp.s
 
 # target to generate assembly for a file
 StmtCodeGen.cpp.s:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/CodeGen/CMakeFiles/codegen.dir/build.make src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.s
 .PHONY : StmtCodeGen.cpp.s
 
 # Help Target
@@ -323,6 +323,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

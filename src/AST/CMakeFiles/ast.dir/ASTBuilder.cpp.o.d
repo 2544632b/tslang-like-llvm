@@ -1,6 +1,6 @@
 src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o: \
-  /Users/chan/Desktop/StaticScript-master-2/src/AST/ASTBuilder.cpp \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/ASTBuilder.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/ASTBuilder.cpp \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/ASTBuilder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -823,7 +823,7 @@ src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.h \
   /usr/local/include/antlr4-runtime/antlr4-runtime.h \
   /usr/local/include/antlr4-runtime/antlr4-common.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/assert.h \
@@ -1079,12 +1079,12 @@ src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o: \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathTokenElement.h \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptParser/StaticScriptParser.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Entity/Type.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Alias.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Error.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Config/Config.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/LLVM.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptParser/StaticScriptParser.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Entity/Type.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Alias.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Error.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Config/Config.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/LLVM.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/Twine.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/SmallVector.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/iterator_range.h \
@@ -1286,8 +1286,8 @@ src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o: \
   /usr/local/opt/llvm@12/include/llvm/Transforms/IPO/AlwaysInliner.h \
   /usr/local/opt/llvm@12/include/llvm/Transforms/IPO/PassManagerBuilder.h \
   /usr/local/opt/llvm@12/include/llvm-c/Transforms/PassManagerBuilder.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/DeclNode.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/Node.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/StmtNode.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/ExprNode.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/ModuleNode.h
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/DeclNode.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/Node.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/StmtNode.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/ExprNode.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/ModuleNode.h

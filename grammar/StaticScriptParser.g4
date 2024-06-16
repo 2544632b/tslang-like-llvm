@@ -64,6 +64,7 @@ typeAnnotation
 type
     : arrayType
     | basicType
+//  | unionType
     ;
 
 arrayType
@@ -77,12 +78,15 @@ basicType
     | String
     ;
 
+/*
+unionType
+    : basicType (BitOr basicType)+
+ // | arrayType (BitOr arrayType)+
+    ;
+*/
+
 functionDeclaration
     : Function Identifier OpenParen parameterList? CloseParen typeAnnotation? functionBody
-    // : Declared Function Identifier OpenParen parameterList? CloseParen typeAnnotation?
-    // Usage:
-    // declared function external_function_name(Param0: unknown, Param1: unknown);
-    // declared function __ZN1907s6v0blkhbghyc8i_test_func(Param0: unknown);
     ;
 
 parameterList

@@ -100,6 +100,11 @@ private:
 
     LLVMFunction *mainFn = nullptr;
     LLVMFunction *curFn = nullptr;
+
+    // Patch begin
+    std::vector<llvm::BasicBlock*> breakStack;
+    std::vector<llvm::BasicBlock*> continueStack;
+    // Patch end
 };
 
 

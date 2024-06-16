@@ -8,6 +8,7 @@ inline void reportError(const llvm::Twine &reason) {
     llvm::report_fatal_error(reason);
 #else
     llvm::errs() << reason << '\n';
+    // exit(-1);
     abort();
 #endif
 }
@@ -34,6 +35,7 @@ inline void reportSemanticError(const llvm::Twine &reason) {
 
 inline void reportOnSemanticError(bool condition, const llvm::Twine &reason) {
     if (condition) {
+        printf("Error func: reportOnSemanticError\n");
         reportSemanticError(reason);
     }
 }
@@ -54,6 +56,7 @@ inline void reportCodeGenError(const llvm::Twine &reason) {
 
 inline void reportOnCodeGenError(bool condition, const llvm::Twine &reason) {
     if (condition) {
+        printf("Error func: reportOnCodeGenError\n");
         reportCodeGenError(reason);
     }
 }

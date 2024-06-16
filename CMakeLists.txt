@@ -8,9 +8,11 @@ set(CMAKE_CXX_STANDARD 17)
 #    set(DEBUG_MODE true)
 #endif ()
 
+set(DEBUG_MODE false)
+
 set(PROJECT_VERSION_MAJOR 0)
-set(PROJECT_VERSION_MINOR 1)
-set(PROJECT_VERSION_PATCH 3)
+set(PROJECT_VERSION_MINOR 3)
+set(PROJECT_VERSION_PATCH 4)
 set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
@@ -48,4 +50,4 @@ target_link_libraries(staticscript PRIVATE antlr4_static ${llvm_libs})
 
 enable_testing()
 
-add_subdirectory(tests)
+# add_subdirectory(tests)

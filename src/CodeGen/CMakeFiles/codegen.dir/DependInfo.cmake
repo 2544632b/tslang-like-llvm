@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/Builtin.cpp" "src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/DeclCodeGen.cpp" "src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/ExprCodeGen.cpp" "src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/IRGenerator.cpp" "src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/Pass.cpp" "src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/StmtCodeGen.cpp" "src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/Builtin.cpp" "src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/DeclCodeGen.cpp" "src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/ExprCodeGen.cpp" "src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/IRGenerator.cpp" "src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/Pass.cpp" "src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/StmtCodeGen.cpp" "src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o" "gcc" "src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

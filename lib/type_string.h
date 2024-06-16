@@ -73,3 +73,5 @@ long type_string_trim_left(type_string *str);
 void type_string_trim_right(type_string *str);
 
 long type_string_trim(type_string *str);
+
+long string_size(type_string *str);

@@ -1,6 +1,6 @@
 CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.cpp.o: \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.cpp \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.cpp \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.h \
   /usr/local/include/antlr4-runtime/antlr4-runtime.h \
   /usr/local/include/antlr4-runtime/antlr4-common.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/algorithm \
@@ -1078,4 +1078,4 @@ CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParser
   /usr/local/include/antlr4-runtime/tree/xpath/XPathTokenElement.h \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptParser/StaticScriptParser.h
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptParser/StaticScriptParser.h

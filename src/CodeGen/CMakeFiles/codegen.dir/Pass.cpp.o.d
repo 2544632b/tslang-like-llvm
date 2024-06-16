@@ -1,7 +1,7 @@
 src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o: \
-  /Users/chan/Desktop/StaticScript-master-2/src/CodeGen/Pass.cpp \
-  /Users/chan/Desktop/StaticScript-master-2/include/CodeGen/Pass.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Alias.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/Pass.cpp \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/CodeGen/Pass.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Alias.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -876,7 +876,7 @@ src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__tree \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/LLVM.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/LLVM.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/Twine.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/SmallVector.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/iterator_range.h \
@@ -1099,5 +1099,5 @@ src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o: \
   /usr/local/opt/llvm@12/include/llvm/Transforms/IPO/AlwaysInliner.h \
   /usr/local/opt/llvm@12/include/llvm/Transforms/IPO/PassManagerBuilder.h \
   /usr/local/opt/llvm@12/include/llvm-c/Transforms/PassManagerBuilder.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Error.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Config/Config.h
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Error.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Config/Config.h

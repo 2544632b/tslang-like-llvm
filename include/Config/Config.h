@@ -1,4 +1,4 @@
-#define PROJECT_BINARY_DIR "/Users/chan/Desktop/StaticScript-master-2"
+#define PROJECT_BINARY_DIR "/Users/chan/Documents/GitHub/tslang-like-llvm"
 #define CMAKE_HOST_APPLE 1
 #define CMAKE_HOST_UNIX 1
 /* #undef CMAKE_HOST_WIN32 */
@@ -8,9 +8,9 @@
 #endif
 
 /* #undef PROJECT_VERSION_MAJOR */
-#define PROJECT_VERSION_MINOR 1
-#define PROJECT_VERSION_PATCH 3
-#define PROJECT_VERSION "0.1.3"
+#define PROJECT_VERSION_MINOR 3
+#define PROJECT_VERSION_PATCH 4
+#define PROJECT_VERSION "0.3.4"
 
 /* #undef DEBUG_MODE */
 

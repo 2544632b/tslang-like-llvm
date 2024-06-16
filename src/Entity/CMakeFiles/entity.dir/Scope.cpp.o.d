@@ -1,6 +1,6 @@
 src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: \
-  /Users/chan/Desktop/StaticScript-master-2/src/Entity/Scope.cpp \
-  /Users/chan/Desktop/StaticScript-master-2/include/Entity/Scope.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/Scope.cpp \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Entity/Scope.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -482,9 +482,9 @@ src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/sortable.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/unreachable_sentinel.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/wrap_iter.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/DeclNode.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Entity/Type.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Alias.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/DeclNode.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Entity/Type.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Alias.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max_element.h \
@@ -878,9 +878,9 @@ src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__tree \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Error.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Config/Config.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/LLVM.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Error.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Config/Config.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/LLVM.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/Twine.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/SmallVector.h \
   /usr/local/opt/llvm@12/include/llvm/ADT/iterator_range.h \
@@ -1103,7 +1103,7 @@ src/Entity/CMakeFiles/entity.dir/Scope.cpp.o: \
   /usr/local/opt/llvm@12/include/llvm/Transforms/IPO/AlwaysInliner.h \
   /usr/local/opt/llvm@12/include/llvm/Transforms/IPO/PassManagerBuilder.h \
   /usr/local/opt/llvm@12/include/llvm-c/Transforms/PassManagerBuilder.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/Node.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/StmtNode.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/AST/ExprNode.h \
-  /Users/chan/Desktop/StaticScript-master-2/include/Support/Find.h
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/Node.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/StmtNode.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/AST/ExprNode.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/include/Support/Find.h

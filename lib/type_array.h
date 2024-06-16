@@ -179,3 +179,9 @@ void type_array_set_string(type_array *arr, size_t index, type_string *element, 
 void type_array_set_array(type_array *arr, size_t index, type_array *element, type_error **error);
 
 type_array *type_array_slice(type_array *arr, ssize_t from, ssize_t to, type_error **error);
+
+long array_length(type_array *arr);
+
+type_array *string_to_array(type_string *str);
+
+void push_back_string(type_array *arr, type_string *new_element);

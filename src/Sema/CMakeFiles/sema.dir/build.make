@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Include any dependencies generated for this target.
 include src/Sema/CMakeFiles/sema.dir/depend.make
@@ -72,72 +72,72 @@ include src/Sema/CMakeFiles/sema.dir/flags.make
 src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o: src/Sema/CMakeFiles/sema.dir/flags.make
 src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o: src/Sema/ASTVisitor.cpp
 src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o: src/Sema/CMakeFiles/sema.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o -MF CMakeFiles/sema.dir/ASTVisitor.cpp.o.d -o CMakeFiles/sema.dir/ASTVisitor.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Sema/ASTVisitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o -MF CMakeFiles/sema.dir/ASTVisitor.cpp.o.d -o CMakeFiles/sema.dir/ASTVisitor.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ASTVisitor.cpp
 
 src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sema.dir/ASTVisitor.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Sema/ASTVisitor.cpp > CMakeFiles/sema.dir/ASTVisitor.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ASTVisitor.cpp > CMakeFiles/sema.dir/ASTVisitor.cpp.i
 
 src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sema.dir/ASTVisitor.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Sema/ASTVisitor.cpp -o CMakeFiles/sema.dir/ASTVisitor.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ASTVisitor.cpp -o CMakeFiles/sema.dir/ASTVisitor.cpp.s
 
 src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o: src/Sema/CMakeFiles/sema.dir/flags.make
 src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o: src/Sema/ScopeScanner.cpp
 src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o: src/Sema/CMakeFiles/sema.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o -MF CMakeFiles/sema.dir/ScopeScanner.cpp.o.d -o CMakeFiles/sema.dir/ScopeScanner.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Sema/ScopeScanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o -MF CMakeFiles/sema.dir/ScopeScanner.cpp.o.d -o CMakeFiles/sema.dir/ScopeScanner.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ScopeScanner.cpp
 
 src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sema.dir/ScopeScanner.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Sema/ScopeScanner.cpp > CMakeFiles/sema.dir/ScopeScanner.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ScopeScanner.cpp > CMakeFiles/sema.dir/ScopeScanner.cpp.i
 
 src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sema.dir/ScopeScanner.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Sema/ScopeScanner.cpp -o CMakeFiles/sema.dir/ScopeScanner.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ScopeScanner.cpp -o CMakeFiles/sema.dir/ScopeScanner.cpp.s
 
 src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o: src/Sema/CMakeFiles/sema.dir/flags.make
 src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o: src/Sema/ReferenceResolver.cpp
 src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o: src/Sema/CMakeFiles/sema.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o -MF CMakeFiles/sema.dir/ReferenceResolver.cpp.o.d -o CMakeFiles/sema.dir/ReferenceResolver.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Sema/ReferenceResolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o -MF CMakeFiles/sema.dir/ReferenceResolver.cpp.o.d -o CMakeFiles/sema.dir/ReferenceResolver.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ReferenceResolver.cpp
 
 src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sema.dir/ReferenceResolver.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Sema/ReferenceResolver.cpp > CMakeFiles/sema.dir/ReferenceResolver.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ReferenceResolver.cpp > CMakeFiles/sema.dir/ReferenceResolver.cpp.i
 
 src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sema.dir/ReferenceResolver.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Sema/ReferenceResolver.cpp -o CMakeFiles/sema.dir/ReferenceResolver.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/ReferenceResolver.cpp -o CMakeFiles/sema.dir/ReferenceResolver.cpp.s
 
 src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o: src/Sema/CMakeFiles/sema.dir/flags.make
 src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o: src/Sema/TypeChecker.cpp
 src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o: src/Sema/CMakeFiles/sema.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o -MF CMakeFiles/sema.dir/TypeChecker.cpp.o.d -o CMakeFiles/sema.dir/TypeChecker.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Sema/TypeChecker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o -MF CMakeFiles/sema.dir/TypeChecker.cpp.o.d -o CMakeFiles/sema.dir/TypeChecker.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/TypeChecker.cpp
 
 src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sema.dir/TypeChecker.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Sema/TypeChecker.cpp > CMakeFiles/sema.dir/TypeChecker.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/TypeChecker.cpp > CMakeFiles/sema.dir/TypeChecker.cpp.i
 
 src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sema.dir/TypeChecker.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Sema/TypeChecker.cpp -o CMakeFiles/sema.dir/TypeChecker.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/TypeChecker.cpp -o CMakeFiles/sema.dir/TypeChecker.cpp.s
 
 src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o: src/Sema/CMakeFiles/sema.dir/flags.make
 src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o: src/Sema/SemanticValidator.cpp
 src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o: src/Sema/CMakeFiles/sema.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o -MF CMakeFiles/sema.dir/SemanticValidator.cpp.o.d -o CMakeFiles/sema.dir/SemanticValidator.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Sema/SemanticValidator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o -MF CMakeFiles/sema.dir/SemanticValidator.cpp.o.d -o CMakeFiles/sema.dir/SemanticValidator.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/SemanticValidator.cpp
 
 src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sema.dir/SemanticValidator.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Sema/SemanticValidator.cpp > CMakeFiles/sema.dir/SemanticValidator.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/SemanticValidator.cpp > CMakeFiles/sema.dir/SemanticValidator.cpp.i
 
 src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sema.dir/SemanticValidator.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Sema/SemanticValidator.cpp -o CMakeFiles/sema.dir/SemanticValidator.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/SemanticValidator.cpp -o CMakeFiles/sema.dir/SemanticValidator.cpp.s
 
 sema: src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o
 sema: src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o
@@ -152,10 +152,10 @@ src/Sema/CMakeFiles/sema.dir/build: sema
 .PHONY : src/Sema/CMakeFiles/sema.dir/build
 
 src/Sema/CMakeFiles/sema.dir/clean:
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Sema && $(CMAKE_COMMAND) -P CMakeFiles/sema.dir/cmake_clean.cmake
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema && $(CMAKE_COMMAND) -P CMakeFiles/sema.dir/cmake_clean.cmake
 .PHONY : src/Sema/CMakeFiles/sema.dir/clean
 
 src/Sema/CMakeFiles/sema.dir/depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/src/Sema /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/src/Sema /Users/chan/Desktop/StaticScript-master-2/src/Sema/CMakeFiles/sema.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/CMakeFiles/sema.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/Sema/CMakeFiles/sema.dir/depend
 

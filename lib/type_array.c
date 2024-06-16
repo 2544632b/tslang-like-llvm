@@ -199,3 +199,27 @@ type_array *type_array_slice(type_array *arr, ssize_t from, ssize_t to, type_err
     new_arr->size = slice_size;
     return new_arr;
 }
+
+long array_length(type_array *arr) {
+    type_error *err;
+    return (long)(type_array_get_size(arr, &err));
+}
+
+type_array *string_to_array(type_string *str) {
+    ssize_t len = type_string_get_size(str);
+
+    type_error *err = type_error_create(100001, "malloc error");
+    type_array *arr = type_array_create_string_array(err);
+    for(ssize_t i = 0; i < len; i++) {
+        type_string *cur = type_string_slice(str, i, i + 1);
+        type_array_push_string(arr, cur, err);
+    }
+
+    return arr;
+}
+
+void push_back_string(type_array *arr, type_string *new_element) {
+    type_error *err = type_error_create(1200, "failed");
+
+    type_array_push_string(arr, new_element, err);
+}

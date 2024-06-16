@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chan/Desktop/StaticScript-master-2/src/Entity
+# Install script for directory: /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

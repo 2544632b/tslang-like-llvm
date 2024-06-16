@@ -9,6 +9,18 @@ bool Type::equals(const SharedPtr<Type> &rhs) const {
     if (isBasic() && rhs->isArray() || isArray() && rhs->isBasic()) {
         return false;
     }
+    /*
+    if (isUnion() && rhs->isNumber() && isNumber()) {
+        return true;
+    }
+    if (isUnion() && rhs->isString() && isString()) {
+        return true;
+    }
+    if (isUnion() && rhs->isBoolean() && isBoolean()) {
+        return true;
+    }
+    */
+
     if (SharedPtr<BasicType> basicType = dynPtrCast<BasicType>(rhs)) {
         const auto *type = dynamic_cast<const BasicType *>(this);
         return type->equals(basicType);
@@ -17,6 +29,8 @@ bool Type::equals(const SharedPtr<Type> &rhs) const {
         const auto *type = dynamic_cast<const ArrayType *>(this);
         return type->equals(arrayType);
     }
+
+    return false;
 }
 
 // 相同类型
@@ -24,7 +38,7 @@ bool Type::equals(const SharedPtr<Type> &rhs) const {
 // 2. 基础整型和基础浮点型是相同类型
 // 3. 数组与空数组是相同类型
 bool Type::sameAs(const SharedPtr<Type> &rhs) const {
-    // 右操作子为空直接返回false
+    // 右值为空直接返回false
     if (!rhs) {
         return false;
     }
@@ -36,21 +50,33 @@ bool Type::sameAs(const SharedPtr<Type> &rhs) const {
     if (isNumber() && rhs->isNumber()) {
         return true;
     }
+
     if (isArray() && rhs->isUnknown()) {
-        // 1. 左操作子为数组, 右操作子为unknown基础类型, 左操作子兼容右操作子(反之不成立)
-        // 2. 左右操作子都是数组, 且右操作子为空树组, 左操作子深度不小于右操作子深度, 左操作子兼容右操作子(反之不成立)
-        if (rhs->isBasic() || rhs->isArray() && asArray()->getDepth() >= rhs->asArray()->getDepth()) {
+        // 1. 左值为数组, 右值为unknown基础类型, 左值兼容右值(反之不成立)
+        // 2. 左右值都是数组, 且右值为空数组, 左值深度不小于右值深度, 左值兼容右值(反之不成立)
+        if (rhs->isBasic() || rhs->isArray() || rhs->isNumberArray() && asArray()->getDepth() >= rhs->asArray()->getDepth()) {
             return true;
         }
     }
+
+    // 如果左边是一个Array，右边是个接受自Array的函数，则允许成立
+    if(isArray() && (rhs->isArray())) {
+        SharedPtr<ArrayType> tempArray = staticPtrCast<ArrayType>(rhs);
+        if(tempArray->getElementType()->isString()) {
+            return true;
+        }
+
+        return false;
+    }
+
     return false;
 }
 
-// 左操作子: 形式上的类型(左值的类型(变量声明类型), 函数形参类型)
-// 右操作子: 实际的类型(右值的类型(变量赋值类型), 函数实参类型)
-// 兼容是有方向的, 左操作子兼容右操作子并不一定代表右操作子兼容左操作子
+// 左值: 形式上的类型(左值的类型(变量声明类型), 函数形参类型)
+// 右值: 实际的类型(右值的类型(变量赋值类型), 函数实参类型)
+// 兼容是有方向的, 左值兼容右值并不一定代表右值兼容左值
 bool Type::compatibleWith(const SharedPtr<Type> &rhs) const {
-    // 右操作子为空直接返回false
+    // 右值为空直接返回false
     if (!rhs) {
         return false;
     }
@@ -100,6 +126,10 @@ bool BasicType::isArray() const {
     return false;
 }
 
+bool BasicType::isUnion() const {
+    return false;
+}
+
 SharedPtr<ArrayType> BasicType::asArray() const {
     return nullptr;
 }
@@ -115,6 +145,7 @@ bool BasicType::equals(const SharedPtr<BasicType> &rhs) const {
 bool BasicType::isNumberArray() const {
     return false;
 }
+
 
 SharedPtr<ArrayType> ArrayType::createNDArrayType(const SharedPtr<BasicType> &basicType, size_t depth) {
     SharedPtr<Type> type = basicType;
@@ -162,6 +193,10 @@ bool ArrayType::isArray() const {
     return true;
 }
 
+bool ArrayType::isUnion() const {
+    return false;
+}
+
 SharedPtr<ArrayType> ArrayType::asArray() const {
     return constPtrCast<ArrayType>(staticPtrCast<const ArrayType>(shared_from_this()));
 }
@@ -194,4 +229,90 @@ bool ArrayType::isNumberArray() const {
         return true;
     }
     return false;
+}
+
+
+void UnionType::createUnionType(std::vector<SharedPtr<BasicType>> typeList, size_t depth) {
+    // this->typeList = typeList;
+    this->typeList.assign(typeList.begin(), typeList.end());
+    /*
+    for(int i = 0; i < depth; ++i) {
+        this->typeList.push_back(typeList[i]);
+    }
+    */
+    this->depth = depth;
+}
+
+bool UnionType::isBasic() const {
+    return true;
+}
+
+bool UnionType::isBoolean() const {
+    for(int i = 0; i < depth; ++i) {
+        if(typeList[i]->isBoolean()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool UnionType::isInteger() const {
+    for(int i = 0; i < depth; ++i) {
+        if(typeList[i]->isInteger()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool UnionType::isFloat() const {
+    for(int i = 0; i < depth; ++i) {
+        if(typeList[i]->isFloat()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool UnionType::isNumber() const {
+    for(int i = 0; i < depth; ++i) {
+        if(typeList[i]->isNumber()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool UnionType::isString() const {
+    for(int i = 0; i < depth; ++i) {
+        if(typeList[i]->isString()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool UnionType::isUnknown() const {
+    return false;
+}
+
+bool UnionType::isArray() const {
+    return false;
+}
+
+bool UnionType::isNumberArray() const {
+    return false;
+}
+
+bool UnionType::isUnion() const {
+    return true;
+}
+
+SharedPtr<ArrayType> UnionType::asArray() const {
+    return nullptr;
 }

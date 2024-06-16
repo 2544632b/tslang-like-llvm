@@ -1,5 +1,4 @@
 #include "AST/ASTBuilder.h"
-// #include "AST/patch/Any.h"
 
 // TODO: bindChildrenInversely
 
@@ -150,8 +149,22 @@ antlrcpp::Any ASTBuilder::visitBasicType(StaticScriptParser::BasicTypeContext *c
     return BasicType::STRING_TYPE;
 }
 
+/*antlrcpp::Any ASTBuilder::visitUnionType(StaticScriptParser::UnionTypeContext *ctx) {
+    SharedPtr<UnionType> __type = makeShared<UnionType>();
+    std::vector<SharedPtr<BasicType>> __basicTypes{};
+
+    for(int i = 0; i < ctx->BitOr().size() + 1; ++i) {
+        SharedPtr<BasicType> basicType = visitBasicType(ctx->basicType(i));
+        // __basicType[i] = basicType;
+        __basicTypes.push_back(basicType);
+    }
+    __type->createUnionType(__basicTypes, ctx->BitOr().size() + 1);
+    return __type;
+}*/
+
 antlrcpp::Any ASTBuilder::visitFunctionDeclaration(StaticScriptParser::FunctionDeclarationContext *ctx) {
-    String name = ctx->Identifier()->getText();
+    String name = ctx->Identifier()->getText(); 
+
     SharedPtrVector<ParmVarDeclNode> params;
     SharedPtr<Type> returnType;
     if (ctx->parameterList()) {
@@ -160,12 +173,8 @@ antlrcpp::Any ASTBuilder::visitFunctionDeclaration(StaticScriptParser::FunctionD
     if (ctx->typeAnnotation()) {
         returnType = visitTypeAnnotation(ctx->typeAnnotation());
     }
-    // if(ctx->Declared()) {
-    //    SharedPtr<CompoundStmtNode> body = nullptr;
-    // }
     SharedPtr<CompoundStmtNode> body = visitFunctionBody(ctx->functionBody());
     SharedPtr<FunctionDeclNode> functionDecl = makeShared<FunctionDeclNode>(name, params, returnType, body);
-    // SharedPtr<FunctionDeclNode> functionDecl = makeShared<FunctionDeclNode>(name, params, returnType, nullptr);
     SharedPtr<FunctionDeclStmtNode> functionDeclStmt = makeShared<FunctionDeclStmtNode>(functionDecl);
     functionDecl->bindChildrenInversely();
     functionDeclStmt->bindChildrenInversely();
@@ -176,7 +185,8 @@ antlrcpp::Any ASTBuilder::visitParameterList(StaticScriptParser::ParameterListCo
     SharedPtrVector<ParmVarDeclNode> params;
     for (size_t i = 0; i < ctx->Identifier().size(); ++i) {
         String name = ctx->Identifier(i)->getText();
-        SharedPtr<Type> type = visitTypeAnnotation(ctx->typeAnnotation(i));
+        SharedPtr<Type> type;
+        type = visitTypeAnnotation(ctx->typeAnnotation(i));
         SharedPtr<ParmVarDeclNode> param = makeShared<ParmVarDeclNode>(name, type);
         param->bindChildrenInversely();
         params.push_back(param);

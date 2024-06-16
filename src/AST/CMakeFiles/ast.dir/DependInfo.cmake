@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/chan/Desktop/StaticScript-master-2/src/AST/ASTBuilder.cpp" "src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/AST/DeclNode.cpp" "src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/AST/ExprNode.cpp" "src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/AST/ModuleNode.cpp" "src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o.d"
-  "/Users/chan/Desktop/StaticScript-master-2/src/AST/StmtNode.cpp" "src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/ASTBuilder.cpp" "src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/DeclNode.cpp" "src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/ExprNode.cpp" "src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/ModuleNode.cpp" "src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o.d"
+  "/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/StmtNode.cpp" "src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o" "gcc" "src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

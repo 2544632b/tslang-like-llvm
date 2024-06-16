@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Include any dependencies generated for this target.
 include src/Driver/CMakeFiles/driver.dir/depend.make
@@ -72,16 +72,16 @@ include src/Driver/CMakeFiles/driver.dir/flags.make
 src/Driver/CMakeFiles/driver.dir/Driver.cpp.o: src/Driver/CMakeFiles/driver.dir/flags.make
 src/Driver/CMakeFiles/driver.dir/Driver.cpp.o: src/Driver/Driver.cpp
 src/Driver/CMakeFiles/driver.dir/Driver.cpp.o: src/Driver/CMakeFiles/driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Driver/CMakeFiles/driver.dir/Driver.cpp.o"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Driver && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Driver/CMakeFiles/driver.dir/Driver.cpp.o -MF CMakeFiles/driver.dir/Driver.cpp.o.d -o CMakeFiles/driver.dir/Driver.cpp.o -c /Users/chan/Desktop/StaticScript-master-2/src/Driver/Driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Driver/CMakeFiles/driver.dir/Driver.cpp.o"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/Driver/CMakeFiles/driver.dir/Driver.cpp.o -MF CMakeFiles/driver.dir/Driver.cpp.o.d -o CMakeFiles/driver.dir/Driver.cpp.o -c /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/Driver.cpp
 
 src/Driver/CMakeFiles/driver.dir/Driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/driver.dir/Driver.cpp.i"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Driver && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Desktop/StaticScript-master-2/src/Driver/Driver.cpp > CMakeFiles/driver.dir/Driver.cpp.i
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/Driver.cpp > CMakeFiles/driver.dir/Driver.cpp.i
 
 src/Driver/CMakeFiles/driver.dir/Driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/driver.dir/Driver.cpp.s"
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Driver && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Desktop/StaticScript-master-2/src/Driver/Driver.cpp -o CMakeFiles/driver.dir/Driver.cpp.s
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/Driver.cpp -o CMakeFiles/driver.dir/Driver.cpp.s
 
 driver: src/Driver/CMakeFiles/driver.dir/Driver.cpp.o
 driver: src/Driver/CMakeFiles/driver.dir/build.make
@@ -92,10 +92,10 @@ src/Driver/CMakeFiles/driver.dir/build: driver
 .PHONY : src/Driver/CMakeFiles/driver.dir/build
 
 src/Driver/CMakeFiles/driver.dir/clean:
-	cd /Users/chan/Desktop/StaticScript-master-2/src/Driver && $(CMAKE_COMMAND) -P CMakeFiles/driver.dir/cmake_clean.cmake
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver && $(CMAKE_COMMAND) -P CMakeFiles/driver.dir/cmake_clean.cmake
 .PHONY : src/Driver/CMakeFiles/driver.dir/clean
 
 src/Driver/CMakeFiles/driver.dir/depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/src/Driver /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/src/Driver /Users/chan/Desktop/StaticScript-master-2/src/Driver/CMakeFiles/driver.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver /Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/CMakeFiles/driver.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/Driver/CMakeFiles/driver.dir/depend
 

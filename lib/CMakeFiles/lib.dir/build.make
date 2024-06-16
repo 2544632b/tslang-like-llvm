@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Utility rule file for lib.
 
@@ -70,19 +70,25 @@ lib/CMakeFiles/lib: lib/type_error.bc
 lib/CMakeFiles/lib: lib/type_string.bc
 lib/CMakeFiles/lib: lib/type_array.bc
 lib/CMakeFiles/lib: lib/type_io.bc
-lib/CMakeFiles/lib: lib/type_math.bc
+lib/CMakeFiles/lib: lib/type_math.c
+lib/CMakeFiles/lib: lib/type_input.cpp
+lib/CMakeFiles/lib: lib/type_map.cpp
 
 lib/type_error.bc: lib/type_error.c
 lib/type_error.bc: lib/type_string.c
 lib/type_error.bc: lib/type_array.c
 lib/type_error.bc: lib/type_io.c
 lib/type_error.bc: lib/type_math.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type_error.bc, type_string.bc, type_array.bc, type_io.bc"
-	cd /Users/chan/Desktop/StaticScript-master-2/lib && clang -c -emit-llvm /Users/chan/Desktop/StaticScript-master-2/lib/type_error.c -std=c99 -O2 -o type_error.bc
-	cd /Users/chan/Desktop/StaticScript-master-2/lib && clang -c -emit-llvm /Users/chan/Desktop/StaticScript-master-2/lib/type_string.c -std=c99 -O2 -o type_string.bc
-	cd /Users/chan/Desktop/StaticScript-master-2/lib && clang -c -emit-llvm /Users/chan/Desktop/StaticScript-master-2/lib/type_array.c -std=c99 -O2 -o type_array.bc
-	cd /Users/chan/Desktop/StaticScript-master-2/lib && clang -c -emit-llvm /Users/chan/Desktop/StaticScript-master-2/lib/type_io.c -std=c99 -O2 -o type_io.bc
-	cd /Users/chan/Desktop/StaticScript-master-2/lib && clang -c -emit-llvm /Users/chan/Desktop/StaticScript-master-2/lib/type_math.c -std=c11 -O2 -o type_math.bc
+lib/type_error.bc: lib/type_input.cpp
+lib/type_error.bc: lib/type_map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type_error.bc, type_string.bc, type_array.bc, type_io.bc, type_math.c, type_input.cpp, type_map.cpp"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_error.c -std=c99 -O2 -o type_error.bc
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_string.c -std=c99 -O2 -o type_string.bc
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_array.c -std=c99 -O2 -o type_array.bc
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_io.c -std=c99 -O2 -o type_io.bc
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_math.c -std=c11 -O2 -o type_math.bc
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang++ -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_input.cpp -std=c++17 -O2 -o type_input.bc
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && clang++ -c -emit-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib/type_map.cpp -std=c++17 -O2 -o type_map.bc
 
 lib/type_string.bc: lib/type_error.bc
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/type_string.bc
@@ -93,15 +99,23 @@ lib/type_array.bc: lib/type_error.bc
 lib/type_io.bc: lib/type_error.bc
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/type_io.bc
 
-lib/type_math.bc: lib/type_error.bc
-	@$(CMAKE_COMMAND) -E touch_nocreate lib/type_math.bc
+lib/type_math.c: lib/type_error.bc
+	@$(CMAKE_COMMAND) -E touch_nocreate lib/type_math.c
+
+lib/type_input.cpp: lib/type_error.bc
+	@$(CMAKE_COMMAND) -E touch_nocreate lib/type_input.cpp
+
+lib/type_map.cpp: lib/type_error.bc
+	@$(CMAKE_COMMAND) -E touch_nocreate lib/type_map.cpp
 
 lib: lib/CMakeFiles/lib
 lib: lib/type_array.bc
 lib: lib/type_error.bc
+lib: lib/type_input.cpp
 lib: lib/type_io.bc
+lib: lib/type_map.cpp
+lib: lib/type_math.c
 lib: lib/type_string.bc
-lib: lib/type_math.bc
 lib: lib/CMakeFiles/lib.dir/build.make
 .PHONY : lib
 
@@ -110,10 +124,10 @@ lib/CMakeFiles/lib.dir/build: lib
 .PHONY : lib/CMakeFiles/lib.dir/build
 
 lib/CMakeFiles/lib.dir/clean:
-	cd /Users/chan/Desktop/StaticScript-master-2/lib && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm/lib && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/lib.dir/clean
 
 lib/CMakeFiles/lib.dir/depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/lib /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/lib /Users/chan/Desktop/StaticScript-master-2/lib/CMakeFiles/lib.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/lib /Users/chan/Documents/GitHub/tslang-like-llvm/lib/CMakeFiles/lib.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : lib/CMakeFiles/lib.dir/depend
 

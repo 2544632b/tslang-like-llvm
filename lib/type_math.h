@@ -11,12 +11,12 @@ double type_pow(double base, double exponent);
 /* Quick Pow will written as TypeScript. */
 double type_sqrt(double sq);
 
-// double type_sin(double deg);
-// double type_cos(double deg);
-// double type_tan(double deg);
+double type_sin(double deg);
+double type_cos(double deg);
+double type_tan(double deg);
 
-// double type_ceil(double x);
-// double type_floor(double x);
+double type_ceil(double x);
+double type_floor(double x);
 
 // double type_fmax(double x, double y);
 

@@ -1,6 +1,6 @@
 CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.cpp.o: \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.cpp \
-  /Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.h \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.cpp \
+  /Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.h \
   /usr/local/include/antlr4-runtime/antlr4-runtime.h \
   /usr/local/include/antlr4-runtime/antlr4-common.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/algorithm \

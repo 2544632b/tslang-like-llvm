@@ -11,7 +11,10 @@ enum class BasicTypeKind {
 
 class ArrayType;
 
+class CircleType;
+
 /// 类型节点
+/// abstract
 class Type : public std::enable_shared_from_this<Type> {
 public:
     virtual ~Type() = default;
@@ -35,6 +38,8 @@ public:
     [[nodiscard]] virtual bool isNumberArray() const = 0;
 
     [[nodiscard]] virtual SharedPtr<ArrayType> asArray() const = 0;
+
+    [[nodiscard]] virtual bool isUnion() const = 0;
 
     bool operator==(const Type &rhs) = delete;
 
@@ -79,6 +84,8 @@ public:
 
     [[nodiscard]] SharedPtr<ArrayType> asArray() const override;
 
+    [[nodiscard]] bool isUnion() const override;
+
     [[nodiscard]] BasicTypeKind getKind() const;
 
     bool operator==(const BasicType &rhs) = delete;
@@ -95,6 +102,7 @@ public:
 private:
     BasicTypeKind kind = BasicTypeKind::Unknown;
 };
+
 
 /// 数组类型节点
 class ArrayType : public Type {
@@ -125,6 +133,8 @@ public:
 
     [[nodiscard]] bool isNumberArray() const override;
 
+    [[nodiscard]] bool isUnion() const override;
+
     [[nodiscard]] SharedPtr<ArrayType> asArray() const override;
 
     /// 获取数组的元素类型, 多维数组则获取子数组的类型
@@ -144,4 +154,41 @@ public:
 private:
     SharedPtr<Type> elementType = BasicType::UNKNOWN_TYPE;
     size_t depth = 1;
+};
+
+
+/// Virtual Type
+class UnionType : public Type {
+private:
+    std::vector<SharedPtr<BasicType>> typeList;
+    size_t depth = 0;
+
+public:
+    explicit UnionType() = default;
+
+    ~UnionType() override = default;
+
+    void createUnionType(std::vector<SharedPtr<BasicType>> typeList, size_t depth);
+
+    [[nodiscard]] bool isBasic() const override;
+
+    [[nodiscard]] bool isBoolean() const override;
+
+    [[nodiscard]] bool isInteger() const override;
+
+    [[nodiscard]] bool isFloat() const override;
+
+    [[nodiscard]] bool isNumber() const override;
+
+    [[nodiscard]] bool isString() const override;
+
+    [[nodiscard]] bool isUnknown() const override;
+
+    [[nodiscard]] bool isArray() const override;
+    
+    [[nodiscard]] bool isNumberArray() const override;
+
+    [[nodiscard]] bool isUnion() const override;
+
+    [[nodiscard]] SharedPtr<ArrayType> asArray() const override;
 };

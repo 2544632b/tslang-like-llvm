@@ -8,6 +8,13 @@ type_string *integer2string(long number) {
     return str;
 }
 
+type_string *integer2ascii(long number) {
+    size_t capacity = type_string_get_capacity_with_size(20);
+    type_string *str = type_string_create_with_capacity(capacity);
+    snprintf(str->buffer, 20, "%ld", (number - 'a'));
+    return str;
+}
+
 type_string *float2string(double number) {
     size_t capacity = type_string_get_capacity_with_size(20);
     type_string *str = type_string_create_with_capacity(capacity);
@@ -32,11 +39,11 @@ void print_number_ln(long number) {
     printf("%ld\n", number);
 }
 
-void print_double(double number) {
+void print_float(double number) {
     printf("%f", number);
 }
 
-void print_double_ln(double number) {
+void print_float_ln(double number) {
     printf("%f\n", number);
 }
 
@@ -46,4 +53,8 @@ void print_string(type_string *str) {
 
 void print_string_ln(type_string *str) {
     printf("%s\n", str->buffer);
+}
+
+void print_ln() {
+    printf("\n");
 }

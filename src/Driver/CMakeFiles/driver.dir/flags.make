@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include/antlr4-runtime -I/Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptLexer -I/Users/chan/Desktop/StaticScript-master-2/antlr4_generated_src/StaticScriptParser -I/usr/local/opt/llvm@12/include -I/Users/chan/Desktop/StaticScript-master-2/include
+CXX_INCLUDES = -I/usr/local/include/antlr4-runtime -I/Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptLexer -I/Users/chan/Documents/GitHub/tslang-like-llvm/antlr4_generated_src/StaticScriptParser -I/usr/local/opt/llvm@12/include -I/Users/chan/Documents/GitHub/tslang-like-llvm/include
 
 CXX_FLAGS = -fvisibility=default -fvisibility-inlines-hidden -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 

@@ -19,7 +19,6 @@ For:                    'for';
 While:                  'while';
 Break:                  'break';
 Continue:               'continue';
-// Declared:            'declared';
 Function:               'function';
 Return:                 'return';
 
@@ -62,7 +61,7 @@ And:                            '&&';   // boolean->boolean
 Or:                             '||';   // boolean->boolean
 Nullish:                        '??';   // unknown->any
 
-// Triple Operator
+// Ternary Operator
 ConditionalQuestion:            '?';    // boolean->any
 // ConditionalColon:            ':';    // boolean->any (left is true, right is false)
 /*

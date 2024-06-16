@@ -42,6 +42,7 @@ public:
     static inline LLVMFunction *trimLeftFunc = nullptr;
     static inline LLVMFunction *trimRightFunc = nullptr;
     static inline LLVMFunction *trimFunc = nullptr;
+    static inline LLVMFunction *stringSizeFunc = nullptr;
 };
 
 class BuiltinArray {
@@ -86,6 +87,9 @@ public:
     static inline LLVMFunction *setStringFunc = nullptr;
     static inline LLVMFunction *setArrayFunc = nullptr;
     static inline LLVMFunction *sliceFunc = nullptr;
+    static inline LLVMFunction *stringToArrayFunc = nullptr;
+    static inline LLVMFunction *arrayLengthFunc = nullptr;
+    static inline LLVMFunction *pushBackStringFunc = nullptr;
 };
 
 class BuiltinIO {
@@ -95,6 +99,7 @@ public:
     static void getTypeAndFunction(LLVMModule &module);
 
     static inline LLVMFunction *integer2stringFunc = nullptr;
+    static inline LLVMFunction *integer2asciiFunc = nullptr;
     static inline LLVMFunction *string2integerFunc = nullptr;
     static inline LLVMFunction *float2stringFunc = nullptr;
     static inline LLVMFunction *string2floatFunc = nullptr;
@@ -104,8 +109,29 @@ public:
     static inline LLVMFunction *printlnFloatFunc = nullptr;
     static inline LLVMFunction *printStringFunc = nullptr;
     static inline LLVMFunction *printlnStringFunc = nullptr;
+    static inline LLVMFunction *printlnFunc = nullptr;
 };
 
+class BuiltinInput {
+public:
+    static void linkModule(LLVMModule &module, LLVMContext &context);
+
+    static void getTypeAndFunction(LLVMModule &module);
+
+    static inline LLVMFunction *getStringFunc = nullptr;
+};
+
+/*
+class BuiltinMap {
+public:
+    static void linkModule(LLVMModule &module, LLVMContext &context);
+
+    static void getTypeAndFunction(LLVMModule &module);
+
+    static inline llvm::PointerType *type = nullptr;
+    static inline LLVMFunction *mapPutFunc = nullptr;
+};
+*/
 
 class BuiltinMath {
 public:
@@ -117,4 +143,9 @@ public:
     static inline LLVMFunction *log10Func = nullptr;
     static inline LLVMFunction *powFunc = nullptr;
     static inline LLVMFunction *sqrtFunc = nullptr;
+    static inline LLVMFunction *sinFunc = nullptr;
+    static inline LLVMFunction *cosFunc = nullptr;
+    static inline LLVMFunction *tanFunc = nullptr;
+    static inline LLVMFunction *ceilFunc = nullptr;
+    static inline LLVMFunction *floorFunc = nullptr;
 };

@@ -10,13 +10,39 @@ void SemanticValidator::visit(const SharedPtr<VarDeclNode> &varDecl) {
     }
 }
 
+// Private function begin
+bool containsReturnStmt(const SharedPtr<StmtNode> &stmt) {
+    if(auto returnStmt = dynPtrCast<ReturnStmtNode>(stmt)) {
+        return true;
+    } else if(auto ifStmt = dynPtrCast<IfStmtNode>(stmt)) {
+        return containsReturnStmt(ifStmt->thenBody) && (ifStmt->elseBody && containsReturnStmt(ifStmt->elseBody));
+    } else if(auto forStmt = dynPtrCast<ForStmtNode>(stmt)) {
+        return containsReturnStmt(forStmt->body);
+    }
+
+    return false;
+}
+// Private function end
+
 void SemanticValidator::visit(const SharedPtr<FunctionDeclNode> &funcDecl) {
     ASTVisitor::visit(funcDecl);
     if (funcDecl->returnType) {
-        reportOnSemanticError(
+
+        bool hasReturnStmt = false;
+        for(const auto &stmt : funcDecl->body->childStmts) {
+            if(containsReturnStmt(stmt)) {
+                hasReturnStmt = true;
+                break;
+            }
+        }
+
+        if(!hasReturnStmt) {
+            reportOnSemanticError(
                 !funcDecl->refReturnStmt,
                 "A function with a return type must have a return statement"
-        );
+            );
+        }
+
     } else if (funcDecl->name == "main") {
         reportSemanticError("Function name cannot be 'main'");
     }
@@ -53,7 +79,7 @@ void SemanticValidator::visit(const SharedPtr<ContinueStmtNode> &continueStmt) {
     }
 }
 
-/*
+
 void SemanticValidator::visit(const SharedPtr<IfStmtNode> &ifStmt) {
     if (ifStmt->condition == nullptr) {
         reportSemanticError("A error condition is empty");
@@ -62,7 +88,7 @@ void SemanticValidator::visit(const SharedPtr<IfStmtNode> &ifStmt) {
         reportSemanticError("A else should compact with if statement.");
     }
 }
-*/
+
 
 void SemanticValidator::visit(const SharedPtr<BreakStmtNode> &breakStmt) {
     if (!breakStmt->refIterationStmt) {

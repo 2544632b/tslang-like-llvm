@@ -21,7 +21,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "src/Entity/CMakeLists.txt"
   "src/Optimization/CMakeLists.txt"
   "src/Sema/CMakeLists.txt"
-  "tests/CMakeLists.txt"
   "/usr/local/Cellar/cmake/3.29.3/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/local/Cellar/cmake/3.29.3/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/local/Cellar/cmake/3.29.3/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
@@ -84,7 +83,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/CodeGen/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Optimization/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Driver/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

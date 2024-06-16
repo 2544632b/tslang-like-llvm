@@ -33,12 +33,14 @@ void Builtin::initialize(LLVMModule &module, LLVMContext &context, const llvm::T
     BuiltinString::linkModule(module, context);
     BuiltinArray::linkModule(module, context);
     BuiltinIO::linkModule(module, context);
+    BuiltinInput::linkModule(module, context);
     BuiltinMath::linkModule(module, context);
 
     BuiltinError::getTypeAndFunction(module);
     BuiltinString::getTypeAndFunction(module);
     BuiltinArray::getTypeAndFunction(module);
     BuiltinIO::getTypeAndFunction(module);
+    BuiltinInput::getTypeAndFunction(module);
     BuiltinMath::getTypeAndFunction(module);
 }
 
@@ -82,6 +84,7 @@ void BuiltinString::getTypeAndFunction(LLVMModule &module) {
     trimLeftFunc = module.getFunction("type_string_trim_left");
     trimRightFunc = module.getFunction("type_string_trim_right");
     trimFunc = module.getFunction("type_string_trim");
+    stringSizeFunc = module.getFunction("string_size");
 }
 
 void BuiltinArray::linkModule(LLVMModule &module, LLVMContext &context) {
@@ -126,6 +129,9 @@ void BuiltinArray::getTypeAndFunction(LLVMModule &module) {
     setStringFunc = module.getFunction("type_array_set_string");
     setArrayFunc = module.getFunction("type_array_set_array");
     sliceFunc = module.getFunction("type_array_slice");
+    arrayLengthFunc = module.getFunction("array_length");
+    stringToArrayFunc = module.getFunction("string_to_array");
+    pushBackStringFunc = module.getFunction("push_back_string");
 }
 
 void BuiltinIO::linkModule(LLVMModule &module, LLVMContext &context) {
@@ -134,6 +140,7 @@ void BuiltinIO::linkModule(LLVMModule &module, LLVMContext &context) {
 
 void BuiltinIO::getTypeAndFunction(LLVMModule &module) {
     integer2stringFunc = module.getFunction("integer2string");
+    integer2asciiFunc = module.getFunction("integer2ascii");
     string2integerFunc = module.getFunction("string2integer");
     float2stringFunc = module.getFunction("float2string");
     string2floatFunc = module.getFunction("string2float");
@@ -143,7 +150,26 @@ void BuiltinIO::getTypeAndFunction(LLVMModule &module) {
     printlnFloatFunc = module.getFunction("print_float_ln");
     printStringFunc = module.getFunction("print_string");
     printlnStringFunc = module.getFunction("print_string_ln");
+    printlnFunc = module.getFunction("print_ln");
 }
+
+void BuiltinInput::linkModule(LLVMModule &module, LLVMContext &context) {
+    BUILTIN_LINK_MODULE(input)
+}
+
+void BuiltinInput::getTypeAndFunction(LLVMModule &module) {
+    getStringFunc = module.getFunction("get_string");
+}
+
+/*
+void BuiltinMap::linkModule(LLVMModule &module, LLVMContext &context) {
+    BUILTIN_LINK_MODULE(map)
+}
+
+void BuiltinMap::getTypeAndFunction(LLVMModule &module) {
+    /// etc....
+}
+*/
 
 void BuiltinMath::linkModule(LLVMModule &module, LLVMContext &context) {
     BUILTIN_LINK_MODULE(math)
@@ -154,4 +180,9 @@ void BuiltinMath::getTypeAndFunction(LLVMModule &module) {
     log10Func = module.getFunction("type_log10");
     powFunc = module.getFunction("type_pow");
     sqrtFunc = module.getFunction("type_sqrt");
+    sinFunc = module.getFunction("type_sin");
+    cosFunc = module.getFunction("type_cos");
+    tanFunc = module.getFunction("type_tan");
+    ceilFunc = module.getFunction("type_ceil");
+    floorFunc = module.getFunction("type_floor");
 }

@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Desktop/StaticScript-master-2
+CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
 
 # Include any dependencies generated for this target.
 include CMakeFiles/staticscript.dir/depend.make
@@ -74,30 +74,30 @@ staticscript_OBJECTS =
 
 # External object files for target staticscript
 staticscript_EXTERNAL_OBJECTS = \
-"/Users/chan/Desktop/StaticScript-master-2/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParser.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParserBaseVisitor.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Entity/CMakeFiles/entity.dir/Type.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Entity/CMakeFiles/entity.dir/Scope.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.o" \
-"/Users/chan/Desktop/StaticScript-master-2/src/Driver/CMakeFiles/driver.dir/Driver.cpp.o"
+"/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParser.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParserBaseVisitor.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParserVisitor.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/CMakeFiles/entity.dir/Type.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity/CMakeFiles/entity.dir/Scope.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/CMakeFiles/codegen.dir/Builtin.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/CMakeFiles/codegen.dir/IRGenerator.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/CMakeFiles/codegen.dir/DeclCodeGen.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/CMakeFiles/codegen.dir/ExprCodeGen.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/CMakeFiles/codegen.dir/StmtCodeGen.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/CodeGen/CMakeFiles/codegen.dir/Pass.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.o" \
+"/Users/chan/Documents/GitHub/tslang-like-llvm/src/Driver/CMakeFiles/driver.dir/Driver.cpp.o"
 
 staticscript: CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.cpp.o
 staticscript: CMakeFiles/parser.dir/antlr4_generated_src/StaticScriptParser/StaticScriptParser.cpp.o
@@ -180,7 +180,7 @@ staticscript: /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/lib/li
 staticscript: /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/lib/libcurses.tbd
 staticscript: /usr/local/opt/llvm@12/lib/libLLVMDemangle.a
 staticscript: CMakeFiles/staticscript.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/chan/Desktop/StaticScript-master-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX executable staticscript"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX executable staticscript"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/staticscript.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -192,6 +192,6 @@ CMakeFiles/staticscript.dir/clean:
 .PHONY : CMakeFiles/staticscript.dir/clean
 
 CMakeFiles/staticscript.dir/depend:
-	cd /Users/chan/Desktop/StaticScript-master-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2 /Users/chan/Desktop/StaticScript-master-2/CMakeFiles/staticscript.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles/staticscript.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/staticscript.dir/depend
 
