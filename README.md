@@ -48,6 +48,8 @@ let arr: string[] = [];
 push_back_string("apple");
 push_back_string("tomato");
 
+// Current array: ["apple", "tomato"]
+
 print_string_ln(arr[0]);
 ```
 
