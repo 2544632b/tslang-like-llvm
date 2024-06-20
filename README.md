@@ -8,6 +8,17 @@ let c = 3.14;
 let d = true;
 ```
 
+Nullish operator:
+```typescript
+let test: string = get_string() ?? "You should enter something....";
+print_string_ln(test);
+
+// input: xxx
+// output: xxx
+// input: <empty>
+// output: You should enter something....
+```
+
 If is static:
 ```typescript
 const x = 10;
