@@ -74,3 +74,22 @@ function hello2(....): string {
   return "xxxx";
 }
 ```
+
+BUGs: Number array may be zero if in some functions:
+```typescript
+let arr = [1, 2, 3, 4, 5, 6]; // <- Number array
+// let arr: number[] = [1, 2, 3, 4, 5, 6];  // output: [1, 2, 3, 4, 5, 6]
+
+function test(arr: number[]) {
+  for(let i = 0; i < array_length(arr); ++i) {
+    print_number(arr[i]);
+    print_string(" ");
+  }
+  print_ln();
+}
+test(arr);
+// output: [0, 0, 0, 0, 0, 0]
+
+test([0, 1, 2, 3, 4, 5, 6]);
+// output: [0, 0, 0, ..., 0];
+```
