@@ -1,4 +1,4 @@
 *.DS_Store
 *.make
 *.cmake
-Makefile
+Makefile/
