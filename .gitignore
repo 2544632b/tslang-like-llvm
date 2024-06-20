@@ -2,3 +2,4 @@
 *.make
 *.cmake
 Makefile/
+CMakeFiles/
