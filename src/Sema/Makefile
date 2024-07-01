@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_SOURCE_DIR = /Users/chan/Desktop/tslang-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_BINARY_DIR = /Users/chan/Desktop/tslang-llvm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles /Users/chan/Documents/GitHub/tslang-like-llvm/src/Sema//CMakeFiles/progress.marks
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles /Users/chan/Desktop/tslang-llvm/src/Sema//CMakeFiles/progress.marks
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/clean
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Sema/CMakeFiles/sema.dir/rule:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/CMakeFiles/sema.dir/rule
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Sema/CMakeFiles/sema.dir/rule
 .PHONY : src/Sema/CMakeFiles/sema.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ sema: src/Sema/CMakeFiles/sema.dir/rule
 
 # fast build rule for target.
 sema/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/build
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/build
 .PHONY : sema/fast
 
 ASTVisitor.o: ASTVisitor.cpp.o
@@ -145,7 +145,7 @@ ASTVisitor.o: ASTVisitor.cpp.o
 
 # target to build an object file
 ASTVisitor.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.o
 .PHONY : ASTVisitor.cpp.o
 
 ASTVisitor.i: ASTVisitor.cpp.i
@@ -153,7 +153,7 @@ ASTVisitor.i: ASTVisitor.cpp.i
 
 # target to preprocess a source file
 ASTVisitor.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.i
 .PHONY : ASTVisitor.cpp.i
 
 ASTVisitor.s: ASTVisitor.cpp.s
@@ -161,7 +161,7 @@ ASTVisitor.s: ASTVisitor.cpp.s
 
 # target to generate assembly for a file
 ASTVisitor.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ASTVisitor.cpp.s
 .PHONY : ASTVisitor.cpp.s
 
 ReferenceResolver.o: ReferenceResolver.cpp.o
@@ -169,7 +169,7 @@ ReferenceResolver.o: ReferenceResolver.cpp.o
 
 # target to build an object file
 ReferenceResolver.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.o
 .PHONY : ReferenceResolver.cpp.o
 
 ReferenceResolver.i: ReferenceResolver.cpp.i
@@ -177,7 +177,7 @@ ReferenceResolver.i: ReferenceResolver.cpp.i
 
 # target to preprocess a source file
 ReferenceResolver.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.i
 .PHONY : ReferenceResolver.cpp.i
 
 ReferenceResolver.s: ReferenceResolver.cpp.s
@@ -185,7 +185,7 @@ ReferenceResolver.s: ReferenceResolver.cpp.s
 
 # target to generate assembly for a file
 ReferenceResolver.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ReferenceResolver.cpp.s
 .PHONY : ReferenceResolver.cpp.s
 
 ScopeScanner.o: ScopeScanner.cpp.o
@@ -193,7 +193,7 @@ ScopeScanner.o: ScopeScanner.cpp.o
 
 # target to build an object file
 ScopeScanner.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.o
 .PHONY : ScopeScanner.cpp.o
 
 ScopeScanner.i: ScopeScanner.cpp.i
@@ -201,7 +201,7 @@ ScopeScanner.i: ScopeScanner.cpp.i
 
 # target to preprocess a source file
 ScopeScanner.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.i
 .PHONY : ScopeScanner.cpp.i
 
 ScopeScanner.s: ScopeScanner.cpp.s
@@ -209,7 +209,7 @@ ScopeScanner.s: ScopeScanner.cpp.s
 
 # target to generate assembly for a file
 ScopeScanner.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/ScopeScanner.cpp.s
 .PHONY : ScopeScanner.cpp.s
 
 SemanticValidator.o: SemanticValidator.cpp.o
@@ -217,7 +217,7 @@ SemanticValidator.o: SemanticValidator.cpp.o
 
 # target to build an object file
 SemanticValidator.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.o
 .PHONY : SemanticValidator.cpp.o
 
 SemanticValidator.i: SemanticValidator.cpp.i
@@ -225,7 +225,7 @@ SemanticValidator.i: SemanticValidator.cpp.i
 
 # target to preprocess a source file
 SemanticValidator.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.i
 .PHONY : SemanticValidator.cpp.i
 
 SemanticValidator.s: SemanticValidator.cpp.s
@@ -233,7 +233,7 @@ SemanticValidator.s: SemanticValidator.cpp.s
 
 # target to generate assembly for a file
 SemanticValidator.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/SemanticValidator.cpp.s
 .PHONY : SemanticValidator.cpp.s
 
 TypeChecker.o: TypeChecker.cpp.o
@@ -241,7 +241,7 @@ TypeChecker.o: TypeChecker.cpp.o
 
 # target to build an object file
 TypeChecker.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.o
 .PHONY : TypeChecker.cpp.o
 
 TypeChecker.i: TypeChecker.cpp.i
@@ -249,7 +249,7 @@ TypeChecker.i: TypeChecker.cpp.i
 
 # target to preprocess a source file
 TypeChecker.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.i
 .PHONY : TypeChecker.cpp.i
 
 TypeChecker.s: TypeChecker.cpp.s
@@ -257,7 +257,7 @@ TypeChecker.s: TypeChecker.cpp.s
 
 # target to generate assembly for a file
 TypeChecker.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Sema/CMakeFiles/sema.dir/build.make src/Sema/CMakeFiles/sema.dir/TypeChecker.cpp.s
 .PHONY : TypeChecker.cpp.s
 
 # Help Target
@@ -296,6 +296,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

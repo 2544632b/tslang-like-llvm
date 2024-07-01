@@ -182,7 +182,27 @@ void TypeChecker::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
     }
 }
 
-void TypeChecker::visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) {}
+void TypeChecker::visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) {
+    ASTVisitor::visit(topExpr);
+
+    const SharedPtr<Type> &condType = topExpr->bhs->type;
+    const SharedPtr<Type> &leftType = topExpr->lhs->type;
+    const SharedPtr<Type> &rightType = topExpr->rhs->type;
+
+    if(!condType->isBoolean()) {
+        reportTypeError("You should given a boolean for this ternary.");
+    }
+
+    if(!leftType->compatibleWith(rightType)) {
+        reportTypeError("The condition values on the left is not compatible for right.");
+    }
+
+    if(leftType->isFloat() || rightType->isFloat()) {
+        topExpr->type = BasicType::FLOAT_TYPE;
+    } else {
+        topExpr->type = leftType;
+    }
+}
 
 void TypeChecker::visit(const SharedPtr<IdentifierExprNode> &varExpr) {
     varExpr->type = varExpr->refVarDecl->type;

@@ -73,6 +73,11 @@ void ScopeScanner::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
     ASTVisitor::visit(bopExpr);
 }
 
+void ScopeScanner::visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) {
+    topExpr->scope = getCurrentScope();
+    ASTVisitor::visit(topExpr);
+}
+
 void ScopeScanner::visit(const SharedPtr<ArraySubscriptExprNode> &asExpr) {
     asExpr->scope = getCurrentScope();
     ASTVisitor::visit(asExpr);

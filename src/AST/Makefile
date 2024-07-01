@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_SOURCE_DIR = /Users/chan/Desktop/tslang-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_BINARY_DIR = /Users/chan/Desktop/tslang-llvm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles /Users/chan/Documents/GitHub/tslang-like-llvm/src/AST//CMakeFiles/progress.marks
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles /Users/chan/Desktop/tslang-llvm/src/AST//CMakeFiles/progress.marks
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/clean
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/AST/CMakeFiles/ast.dir/rule:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/CMakeFiles/ast.dir/rule
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/AST/CMakeFiles/ast.dir/rule
 .PHONY : src/AST/CMakeFiles/ast.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ ast: src/AST/CMakeFiles/ast.dir/rule
 
 # fast build rule for target.
 ast/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/build
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/build
 .PHONY : ast/fast
 
 ASTBuilder.o: ASTBuilder.cpp.o
@@ -145,7 +145,7 @@ ASTBuilder.o: ASTBuilder.cpp.o
 
 # target to build an object file
 ASTBuilder.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.o
 .PHONY : ASTBuilder.cpp.o
 
 ASTBuilder.i: ASTBuilder.cpp.i
@@ -153,7 +153,7 @@ ASTBuilder.i: ASTBuilder.cpp.i
 
 # target to preprocess a source file
 ASTBuilder.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.i
 .PHONY : ASTBuilder.cpp.i
 
 ASTBuilder.s: ASTBuilder.cpp.s
@@ -161,7 +161,7 @@ ASTBuilder.s: ASTBuilder.cpp.s
 
 # target to generate assembly for a file
 ASTBuilder.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ASTBuilder.cpp.s
 .PHONY : ASTBuilder.cpp.s
 
 DeclNode.o: DeclNode.cpp.o
@@ -169,7 +169,7 @@ DeclNode.o: DeclNode.cpp.o
 
 # target to build an object file
 DeclNode.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/DeclNode.cpp.o
 .PHONY : DeclNode.cpp.o
 
 DeclNode.i: DeclNode.cpp.i
@@ -177,7 +177,7 @@ DeclNode.i: DeclNode.cpp.i
 
 # target to preprocess a source file
 DeclNode.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/DeclNode.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/DeclNode.cpp.i
 .PHONY : DeclNode.cpp.i
 
 DeclNode.s: DeclNode.cpp.s
@@ -185,7 +185,7 @@ DeclNode.s: DeclNode.cpp.s
 
 # target to generate assembly for a file
 DeclNode.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/DeclNode.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/DeclNode.cpp.s
 .PHONY : DeclNode.cpp.s
 
 ExprNode.o: ExprNode.cpp.o
@@ -193,7 +193,7 @@ ExprNode.o: ExprNode.cpp.o
 
 # target to build an object file
 ExprNode.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ExprNode.cpp.o
 .PHONY : ExprNode.cpp.o
 
 ExprNode.i: ExprNode.cpp.i
@@ -201,7 +201,7 @@ ExprNode.i: ExprNode.cpp.i
 
 # target to preprocess a source file
 ExprNode.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ExprNode.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ExprNode.cpp.i
 .PHONY : ExprNode.cpp.i
 
 ExprNode.s: ExprNode.cpp.s
@@ -209,7 +209,7 @@ ExprNode.s: ExprNode.cpp.s
 
 # target to generate assembly for a file
 ExprNode.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ExprNode.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ExprNode.cpp.s
 .PHONY : ExprNode.cpp.s
 
 ModuleNode.o: ModuleNode.cpp.o
@@ -217,7 +217,7 @@ ModuleNode.o: ModuleNode.cpp.o
 
 # target to build an object file
 ModuleNode.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.o
 .PHONY : ModuleNode.cpp.o
 
 ModuleNode.i: ModuleNode.cpp.i
@@ -225,7 +225,7 @@ ModuleNode.i: ModuleNode.cpp.i
 
 # target to preprocess a source file
 ModuleNode.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.i
 .PHONY : ModuleNode.cpp.i
 
 ModuleNode.s: ModuleNode.cpp.s
@@ -233,7 +233,7 @@ ModuleNode.s: ModuleNode.cpp.s
 
 # target to generate assembly for a file
 ModuleNode.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/ModuleNode.cpp.s
 .PHONY : ModuleNode.cpp.s
 
 StmtNode.o: StmtNode.cpp.o
@@ -241,7 +241,7 @@ StmtNode.o: StmtNode.cpp.o
 
 # target to build an object file
 StmtNode.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/StmtNode.cpp.o
 .PHONY : StmtNode.cpp.o
 
 StmtNode.i: StmtNode.cpp.i
@@ -249,7 +249,7 @@ StmtNode.i: StmtNode.cpp.i
 
 # target to preprocess a source file
 StmtNode.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/StmtNode.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/StmtNode.cpp.i
 .PHONY : StmtNode.cpp.i
 
 StmtNode.s: StmtNode.cpp.s
@@ -257,7 +257,7 @@ StmtNode.s: StmtNode.cpp.s
 
 # target to generate assembly for a file
 StmtNode.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/StmtNode.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/AST/CMakeFiles/ast.dir/build.make src/AST/CMakeFiles/ast.dir/StmtNode.cpp.s
 .PHONY : StmtNode.cpp.s
 
 # Help Target
@@ -296,6 +296,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

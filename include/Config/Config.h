@@ -1,4 +1,4 @@
-#define PROJECT_BINARY_DIR "/Users/chan/Documents/GitHub/tslang-like-llvm"
+#define PROJECT_BINARY_DIR "/Users/chan/Desktop/tslang-llvm"
 #define CMAKE_HOST_APPLE 1
 #define CMAKE_HOST_UNIX 1
 /* #undef CMAKE_HOST_WIN32 */

@@ -242,7 +242,7 @@ void IRGenerator::visit(const SharedPtr<UnaryOperatorExprNode> &uopExpr) {
     }
 }
 
-// LLVM Patch begin
+// IR begin
 
 LLVMValue* generateNullishCoalescing(LLVMValue* lhs, LLVMValue* rhs, llvm::IRBuilder<> &builder) {
     llvm::Function* function = builder.GetInsertBlock()->getParent();
@@ -312,7 +312,7 @@ LLVMValue* generateNullishCoalescing(LLVMValue* lhs, LLVMValue* rhs, llvm::IRBui
     return phiNode;
 }
 
-// LLVM Patch end
+// IR end
 
 void IRGenerator::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
     unsigned int bopCode = bopExpr->opCode;
@@ -527,26 +527,49 @@ void IRGenerator::visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) {
 }
 
 void IRGenerator::visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) {
-    const SharedPtr<Type> boolType = topExpr->bhs->type;
+    ASTVisitor::visit(topExpr);
     
     LLVMValue *targetCode = nullptr;
     LLVMValue *boolCode = topExpr->bhs->code;
     LLVMValue *lhsCode = topExpr->lhs->code;
     LLVMValue *rhsCode = topExpr->rhs->code;
-    
-    // DO NOT RUNNING ON JIT!
-    if(!boolType->isBoolean()) {
-        targetCode = lhsCode;
-    } else if(boolType->isBoolean()) {
-        if(boolCode == llvmIRBuilder.getTrue()) {
-            targetCode = lhsCode;
-        } else if(boolCode == llvmIRBuilder.getFalse()) {
-            targetCode = rhsCode;
-        }
+
+    if(lhsCode->getType() != rhsCode->getType()) {
+        reportTypeError("It should be same when using the ternary.");
     }
 
-    topExpr->code = targetCode;
+    // Create the basick block
+    llvm::Function *function = llvmIRBuilder.GetInsertBlock()->getParent();
+    llvm::BasicBlock *thenBB = llvm::BasicBlock::Create(llvmIRBuilder.getContext(), "then", function);
+    llvm::BasicBlock *elseBB = llvm::BasicBlock::Create(llvmIRBuilder.getContext(), "else");
+    llvm::BasicBlock *mergeBB = llvm::BasicBlock::Create(llvmIRBuilder.getContext(), "ifcont");
+
+    // If IR
+    llvmIRBuilder.CreateCondBr(boolCode, thenBB, elseBB);
+
+    // then IR
+    llvmIRBuilder.SetInsertPoint(thenBB);
+    llvmIRBuilder.CreateBr(mergeBB);
+    llvmIRBuilder.GetInsertBlock();
+
+    // else IR
+    function->getBasicBlockList().push_back(elseBB);
+    llvmIRBuilder.SetInsertPoint(elseBB);
+    llvmIRBuilder.CreateBr(mergeBB);
+    elseBB = llvmIRBuilder.GetInsertBlock();
+
+    // emit branches
+    function->getBasicBlockList().push_back(mergeBB);
+    llvmIRBuilder.SetInsertPoint(mergeBB);
+
+    // Set a value for PHI
+    llvm::PHINode *phiNode = llvmIRBuilder.CreatePHI(lhsCode->getType(), 2, "iftmp");
+    phiNode->addIncoming(lhsCode, thenBB);
+    phiNode->addIncoming(rhsCode, elseBB);
+
+    topExpr->code = phiNode;
 }
+
 
 // Get a element
 void IRGenerator::visit(const SharedPtr<ArraySubscriptExprNode> &asExpr) {

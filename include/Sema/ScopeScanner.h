@@ -32,6 +32,8 @@ public:
 
     void visit(const SharedPtr<BinaryOperatorExprNode> &bopExpr) override;
 
+    void visit(const SharedPtr<TernaryOperatorExprNode> &topExpr) override;
+
     void visit(const SharedPtr<ArraySubscriptExprNode> &asExpr) override;
 
     void visit(const SharedPtr<ExprStmtNode> &exprStmt) override;

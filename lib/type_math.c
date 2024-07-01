@@ -33,10 +33,10 @@ double type_tan(double deg) {
     return tan(deg);
 }
 
-double type_ceil(double x) {
+long type_ceil(double x) {
     return ceil(x);
 }
 
-double type_floor(double x) {
+long type_floor(double x) {
     return floor(x);
 }

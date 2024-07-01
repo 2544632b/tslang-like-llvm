@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_SOURCE_DIR = /Users/chan/Desktop/tslang-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_BINARY_DIR = /Users/chan/Desktop/tslang-llvm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles /Users/chan/Documents/GitHub/tslang-like-llvm/src/Optimization//CMakeFiles/progress.marks
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles /Users/chan/Desktop/tslang-llvm/src/Optimization//CMakeFiles/progress.marks
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/clean
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Optimization/CMakeFiles/optimization.dir/rule:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/CMakeFiles/optimization.dir/rule
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Optimization/CMakeFiles/optimization.dir/rule
 .PHONY : src/Optimization/CMakeFiles/optimization.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ optimization: src/Optimization/CMakeFiles/optimization.dir/rule
 
 # fast build rule for target.
 optimization/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/build
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/build
 .PHONY : optimization/fast
 
 Optimizer.o: Optimizer.cpp.o
@@ -145,7 +145,7 @@ Optimizer.o: Optimizer.cpp.o
 
 # target to build an object file
 Optimizer.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.o
 .PHONY : Optimizer.cpp.o
 
 Optimizer.i: Optimizer.cpp.i
@@ -153,7 +153,7 @@ Optimizer.i: Optimizer.cpp.i
 
 # target to preprocess a source file
 Optimizer.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.i
 .PHONY : Optimizer.cpp.i
 
 Optimizer.s: Optimizer.cpp.s
@@ -161,7 +161,7 @@ Optimizer.s: Optimizer.cpp.s
 
 # target to generate assembly for a file
 Optimizer.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Optimization/CMakeFiles/optimization.dir/build.make src/Optimization/CMakeFiles/optimization.dir/Optimizer.cpp.s
 .PHONY : Optimizer.cpp.s
 
 # Help Target
@@ -188,6 +188,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

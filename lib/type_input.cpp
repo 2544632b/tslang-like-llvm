@@ -30,7 +30,7 @@ static type_string *type_string_create_with_capacity(size_t capacity) {
     return str;
 }
 
-type_string *type_string_create(const char *literal) {
+type_string *type_string_create_0(const char *literal) {
     size_t size = strlen(literal);
     size_t capacity = type_string_get_capacity_with_size(size);
     type_string *str = type_string_create_with_capacity(capacity);
@@ -43,6 +43,6 @@ type_string *type_string_create(const char *literal) {
 }
 
 extern "C" type_string* get_string() {
-    return type_string_create(input_from_kb());
+    return type_string_create_0(input_from_kb());
 }
 

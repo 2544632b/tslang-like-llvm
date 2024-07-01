@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.29.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_SOURCE_DIR = /Users/chan/Desktop/tslang-llvm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chan/Documents/GitHub/tslang-like-llvm
+CMAKE_BINARY_DIR = /Users/chan/Desktop/tslang-llvm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles /Users/chan/Documents/GitHub/tslang-like-llvm/src/Entity//CMakeFiles/progress.marks
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Documents/GitHub/tslang-like-llvm/CMakeFiles 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles /Users/chan/Desktop/tslang-llvm/src/Entity//CMakeFiles/progress.marks
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chan/Desktop/tslang-llvm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/clean
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/preinstall
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Entity/CMakeFiles/entity.dir/rule:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/CMakeFiles/entity.dir/rule
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Entity/CMakeFiles/entity.dir/rule
 .PHONY : src/Entity/CMakeFiles/entity.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ entity: src/Entity/CMakeFiles/entity.dir/rule
 
 # fast build rule for target.
 entity/fast:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/build
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/build
 .PHONY : entity/fast
 
 Scope.o: Scope.cpp.o
@@ -145,7 +145,7 @@ Scope.o: Scope.cpp.o
 
 # target to build an object file
 Scope.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Scope.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Scope.cpp.o
 .PHONY : Scope.cpp.o
 
 Scope.i: Scope.cpp.i
@@ -153,7 +153,7 @@ Scope.i: Scope.cpp.i
 
 # target to preprocess a source file
 Scope.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Scope.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Scope.cpp.i
 .PHONY : Scope.cpp.i
 
 Scope.s: Scope.cpp.s
@@ -161,7 +161,7 @@ Scope.s: Scope.cpp.s
 
 # target to generate assembly for a file
 Scope.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Scope.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Scope.cpp.s
 .PHONY : Scope.cpp.s
 
 Type.o: Type.cpp.o
@@ -169,7 +169,7 @@ Type.o: Type.cpp.o
 
 # target to build an object file
 Type.cpp.o:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Type.cpp.o
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Type.cpp.o
 .PHONY : Type.cpp.o
 
 Type.i: Type.cpp.i
@@ -177,7 +177,7 @@ Type.i: Type.cpp.i
 
 # target to preprocess a source file
 Type.cpp.i:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Type.cpp.i
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Type.cpp.i
 .PHONY : Type.cpp.i
 
 Type.s: Type.cpp.s
@@ -185,7 +185,7 @@ Type.s: Type.cpp.s
 
 # target to generate assembly for a file
 Type.cpp.s:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Type.cpp.s
+	cd /Users/chan/Desktop/tslang-llvm && $(MAKE) $(MAKESILENT) -f src/Entity/CMakeFiles/entity.dir/build.make src/Entity/CMakeFiles/entity.dir/Type.cpp.s
 .PHONY : Type.cpp.s
 
 # Help Target
@@ -215,6 +215,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/chan/Documents/GitHub/tslang-like-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/chan/Desktop/tslang-llvm && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

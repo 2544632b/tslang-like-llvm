@@ -15,8 +15,8 @@ double type_sin(double deg);
 double type_cos(double deg);
 double type_tan(double deg);
 
-double type_ceil(double x);
-double type_floor(double x);
+long type_ceil(double x);
+long type_floor(double x);
 
 // double type_fmax(double x, double y);
 
