@@ -1,5 +1,5 @@
 set(BUILTIN_LIB_SOURCES type_error.c type_string.c type_array.c type_io.c type_math.c type_input.cpp type_map.cpp)
-set(BUILTIN_LIB_BITCODES type_error.bc type_string.bc type_array.bc type_io.bc type_math.c type_input.cpp type_map.cpp)
+set(BUILTIN_LIB_BITCODES type_error.bc type_string.bc type_array.bc type_io.bc type_math.bc type_input.bc type_map.bc)
 
 add_custom_command(
         OUTPUT ${BUILTIN_LIB_BITCODES}
