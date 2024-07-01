@@ -75,6 +75,13 @@ function hello2(....): string {
 }
 ```
 
+Condition expression:
+```typescript
+function test(str: string) {
+  return str == "hi" ? "hello" : "You should say hi.";
+}
+```
+
 BUGs: Number array may be zero if in some functions:
 ```typescript
 let arr = [1, 2, 3, 4, 5, 6]; // <- Number array
