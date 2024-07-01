@@ -1,5 +1,0 @@
-# Hashes of file build rules.
-886ab07a9a617d209b66dcf4a1c74cba antlr4_generated_src/StaticScriptLexer/StaticScriptLexer.tokens
-578b69520fe7972e6a62f66810d50c98 antlr4_generated_src/StaticScriptParser/StaticScriptParser.tokens
-5c3867227f845bd55e9d779fefd8ce2c lib/CMakeFiles/lib
-a8b1276e22f4d87f2f6d0f19c0ca20c4 lib/type_error.bc
